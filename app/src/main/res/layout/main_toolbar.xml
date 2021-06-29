@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_tool_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#4F4F4F"
+    android:title=""
+
+    android:minHeight="?attr/actionBarSize"
+    tools:ignore="NewApi">
+
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center"
+        android:text="felix's test" />
+
+</androidx.appcompat.widget.Toolbar>

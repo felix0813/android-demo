@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <include layout="@layout/main_toolbar"/>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="下一页面" />
+
+    <Button
+        android:id="@+id/dial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="拨打电话" />
+
+    <EditText
+        android:id="@+id/tel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入电话号码：例：10086" />
+
+    <Button
+        android:id="@+id/life_lauch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="lifecyle/lauchmode测试" />
+
+    <Button
+        android:id="@+id/chat_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="聊天测试" />
+
+    <Button
+        android:id="@+id/news_test_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="新闻测试" />
+
+    <Button
+        android:id="@+id/broadcast_test_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="广播测试" />
+
+    <ImageView
+        android:id="@+id/more_fucntions"
+        android:layout_width="219dp"
+        android:layout_height="141dp"
+        android:layout_gravity="center"
+        android:src="@drawable/more_functions" />
+
+</LinearLayout>

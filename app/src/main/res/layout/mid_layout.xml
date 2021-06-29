@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/sub_toolbar"/>
+    <Button
+        android:id="@+id/httpstest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="https测试" />
+
+    <EditText
+        android:id="@+id/httpstext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:maxLines="2"
+        android:text="https://www." />
+
+    <Button
+        android:id="@+id/httptest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="http测试" />
+    <EditText
+        android:id="@+id/httptext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:maxLines="2"
+        android:text="http://www." />
+
+    <Button
+        android:id="@+id/returntest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="返回数据测试" />
+    <Button
+        android:id="@+id/layout_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="布局测试" />
+    <Button
+        android:id="@+id/img_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="图片测试" />
+
+    <Button
+        android:id="@+id/list_view_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="listview测试" />
+
+    <Button
+        android:id="@+id/recyclerview_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="recyclerview测试" />
+
+    <Button
+        android:id="@+id/staggeredGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="瀑布式view测试" />
+
+    <Button
+        android:id="@+id/grid_layout_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="网格view测试" />
+
+    <Button
+        android:id="@+id/fragment_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="fragment测试" />
+
+</LinearLayout>
