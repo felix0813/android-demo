@@ -1,10 +1,12 @@
 package com.example.viewtest
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import java.io.*
 
 class persistence_test : BaseActivity() {
@@ -50,6 +52,31 @@ class persistence_test : BaseActivity() {
             catch (e:IOException){
                 e.printStackTrace()
             }
+        }
+        val sharedPreference=findViewById<Button>(R.id.sharedpreference)
+        sharedPreference.setOnClickListener {
+            val editor=getSharedPreferences("phone",Context.MODE_PRIVATE).edit()
+            val reader=getSharedPreferences("phone",Context.MODE_PRIVATE)
+            val pair=get_edittext()
+            if(reader.contains(pair.first)){
+                AlertDialog.Builder(this).apply {
+                    setTitle("名字重复")
+                    setMessage("你可以在名字后面加上一个数字来解决这个问题,或者选择替换号码")
+                    setPositiveButton("替换"){_,_->
+                        editor.putString(pair.first,pair.second)
+                        editor.apply()
+                    }
+                    setNegativeButton("取消"){_,_->
+                    }
+                    show()
+                }
+            }
+            else{
+                editor.putString(pair.first,pair.second)
+                editor.apply()
+            }
+
+
         }
     }
     fun get_edittext():Pair<String,String>{

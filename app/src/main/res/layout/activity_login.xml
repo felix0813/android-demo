@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@color/cardview_dark_background"
@@ -11,6 +11,7 @@
     <EditText
         android:id="@+id/username"
         android:layout_width="300dp"
+        android:inputType="text"
         android:hint="uesername"
         android:background="@color/white"
         android:layout_height="wrap_content"
@@ -20,6 +21,7 @@
     <EditText
         android:background="@color/white"
         android:hint="password"
+        android:inputType="textPassword"
         android:id="@+id/password"
         android:layout_width="300dp"
         android:layout_gravity="center_horizontal"
@@ -27,6 +29,13 @@
         tools:layout_editor_absoluteX="55dp"
         tools:layout_editor_absoluteY="200dp"
         tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/remember_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="55dp"
+        android:text="记住密码" />
 
     <Button
         android:id="@+id/login_button"
