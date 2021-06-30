@@ -36,7 +36,7 @@ class MainActivity : BaseActivity() {
 
             val tel=findViewById<TextView>(R.id.tel).text.toString()
             if(tel.length!=5&&tel.length!=8&&tel.length!=11){
-                val intent2: Intent =Intent(this,tel_warn_activity::class.java)
+                val intent2 =Intent(this,tel_warn_activity::class.java)
                 intent2.putExtra("tel",tel)
                 startActivity(intent2)
             }else{
@@ -68,6 +68,10 @@ class MainActivity : BaseActivity() {
         val broadcast_test_button=findViewById<Button>(R.id.broadcast_test_button)
         broadcast_test_button.setOnClickListener {
             startActivity(Intent(this,broadcast_test::class.java))
+        }
+        val persistence_test_button=findViewById<Button>(R.id.persistence_test_button)
+        persistence_test_button.setOnClickListener {
+            startActivity(Intent(this,persistence_test::class.java))
         }
     }
 

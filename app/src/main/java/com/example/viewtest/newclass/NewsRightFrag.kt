@@ -12,18 +12,13 @@ import androidx.fragment.app.Fragment
 import com.example.viewtest.R
 
 class NewsRightFrag:Fragment() {
-    private lateinit var fcontainer:ViewGroup
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        if (container != null) {
-            fcontainer=container
-        }
-        else{
-            Log.e("felix","container is null")
-        }
+
         return inflater.inflate(R.layout.news_right_frag,container,false)
     }
     @SuppressLint("InflateParams")

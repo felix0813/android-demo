@@ -12,12 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ViewTest">
+        <activity android:name=".persistence_test"></activity>
         <activity android:name=".login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <receiver
@@ -27,7 +28,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
-
         </receiver>
 
         <activity android:name=".broadcast_test" />
@@ -74,7 +74,6 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
             </intent-filter>
         </activity>
     </application>

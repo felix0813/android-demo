@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".persistence_test">
+    <include layout="@layout/sub_toolbar"/>
+
+    <Button
+        android:id="@+id/store_in_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="文件存储" />
+
+    <Button
+        android:id="@+id/sharedpreference"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="sharedpreference存储" />
+
+    <Button
+        android:id="@+id/store_in_database"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="数据库存储" />
+
+    <EditText
+        android:id="@+id/register_username"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:layout_height="wrap_content"
+        android:hint="Name不超过10位的字符串" />
+
+    <EditText
+        android:id="@+id/register_password"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="password不超过10位的字符串" />
+
+
+</LinearLayout>
