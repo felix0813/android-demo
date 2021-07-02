@@ -56,6 +56,12 @@
         android:layout_height="wrap_content"
         android:text="持久化测试" />
 
+    <Button
+        android:id="@+id/read_contacts_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="读取联系人" />
+
     <ImageView
         android:id="@+id/more_fucntions"
         android:layout_width="219dp"

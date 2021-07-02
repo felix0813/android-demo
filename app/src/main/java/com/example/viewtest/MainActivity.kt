@@ -1,14 +1,21 @@
 package com.example.viewtest
 
+import android.Manifest
+import android.app.Activity
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 
 class MainActivity : BaseActivity() {
 
@@ -40,9 +47,14 @@ class MainActivity : BaseActivity() {
                 intent2.putExtra("tel",tel)
                 startActivity(intent2)
             }else{
-                val intent= Intent(Intent.ACTION_DIAL)
-                intent.data= Uri.parse("tel:$tel")
-                startActivity(intent)
+                if(ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE)!=PackageManager.PERMISSION_GRANTED){
+                    ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE),1)
+                }
+                else {
+                    val intent = Intent(Intent.ACTION_CALL)
+                    intent.data = Uri.parse("tel:$tel")
+                    startActivity(intent)
+                }
             }
             Log.d("info","jump to phone call")
         }
@@ -72,6 +84,31 @@ class MainActivity : BaseActivity() {
         val persistence_test_button=findViewById<Button>(R.id.persistence_test_button)
         persistence_test_button.setOnClickListener {
             startActivity(Intent(this,persistence_test::class.java))
+        }
+        val read_contacts_button=findViewById<Button>(R.id.read_contacts_button)
+        read_contacts_button.setOnClickListener {
+            startActivity(Intent(this,read_contacts::class.java))
+        }
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        when(requestCode){
+            1->{
+                if(grantResults.isNotEmpty()&&grantResults[0]==PackageManager.PERMISSION_GRANTED){
+                    val tel=findViewById<EditText>(R.id.tel).text.toString()
+                    val intent = Intent(Intent.ACTION_CALL)
+                    intent.data = Uri.parse("tel:$tel")
+                    startActivity(intent)
+                }
+                else{
+                    Toast.makeText(this,"You deny the permission",Toast.LENGTH_SHORT).show()
+                }
+            }
         }
     }
 
