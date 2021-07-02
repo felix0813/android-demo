@@ -20,25 +20,53 @@
         android:layout_height="wrap_content"
         android:text="sharedpreference存储" />
 
+    <EditText
+        android:id="@+id/register_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name不超过10位的字符串"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/register_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="password不超过10位的字符串"
+        android:inputType="textPassword" />
+
     <Button
         android:id="@+id/store_in_database"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="数据库存储" />
-
-    <EditText
-        android:id="@+id/register_username"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:inputType="text"
-        android:layout_height="wrap_content"
-        android:hint="Name不超过10位的字符串" />
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:id="@+id/tablename"
+            android:hint="table1"
+            android:autofillHints="true"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/value1"
+            android:inputType="text"
+            android:hint="value1"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:id="@+id/value2"
+            android:hint="value2"/>
+    </LinearLayout>
 
-    <EditText
-        android:id="@+id/register_password"
-        android:inputType="textPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="password不超过10位的字符串" />
+
 
 
 </LinearLayout>

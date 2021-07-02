@@ -1,6 +1,9 @@
 package com.example.viewtest
 
+import android.content.ContentValues
 import android.content.Context
+import android.database.sqlite.SQLiteDatabase
+import android.database.sqlite.SQLiteOpenHelper
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -10,6 +13,17 @@ import androidx.appcompat.app.AlertDialog
 import java.io.*
 
 class persistence_test : BaseActivity() {
+    inner class sqlhelper(val context :Context,val name :String,val version:Int):SQLiteOpenHelper(context,name,null,version){
+        private val sql=" create table if not exists table1( name text not null,phone text not null)"
+        override fun onCreate(db: SQLiteDatabase?) {
+            db?.execSQL(sql)
+            Toast.makeText(context,"create successfully",Toast.LENGTH_SHORT).show()
+        }
+
+        override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_persistence_test)
@@ -76,6 +90,20 @@ class persistence_test : BaseActivity() {
                 editor.apply()
             }
 
+
+        }
+        val dbhelper=sqlhelper(this,"db",1).writableDatabase
+        val dbstore=findViewById<Button>(R.id.store_in_database)
+        dbstore.setOnClickListener {
+
+            val tablename=findViewById<EditText>(R.id.tablename).text.toString()
+            val name=findViewById<EditText>(R.id.value1).text.toString()
+            val num=findViewById<EditText>(R.id.value2).text.toString()
+            val data=ContentValues().apply {
+                put("name",name)
+                put("phone",num)
+            }
+            dbhelper.insert(tablename,null,data)
 
         }
     }
