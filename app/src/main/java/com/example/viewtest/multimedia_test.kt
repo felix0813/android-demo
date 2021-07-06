@@ -1,9 +1,7 @@
 package com.example.viewtest
 
 import android.media.MediaPlayer
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
 import android.widget.Button
 
 class multimedia_test : BaseActivity() {
@@ -17,20 +15,20 @@ class multimedia_test : BaseActivity() {
 
         mediaPlayer.setDataSource(fd.fileDescriptor,fd.startOffset,fd.length)
         mediaPlayer.prepare()
-        val play=findViewById<Button>(R.id.play_audio)
-        play.setOnClickListener {
+        val play_audio=findViewById<Button>(R.id.play_audio)
+        play_audio.setOnClickListener {
             if(!mediaPlayer.isPlaying){
                 mediaPlayer.start()
             }
         }
-        val pause=findViewById<Button>(R.id.pause_audio)
-        pause.setOnClickListener {
+        val pause_audio=findViewById<Button>(R.id.pause_audio)
+        pause_audio.setOnClickListener {
             if(mediaPlayer.isPlaying){
                 mediaPlayer.pause()
             }
         }
-        val stop=findViewById<Button>(R.id.stop_audio)
-        stop.setOnClickListener {
+        val stop_audio=findViewById<Button>(R.id.stop_audio)
+        stop_audio.setOnClickListener {
             if(mediaPlayer.isPlaying){
                 mediaPlayer.reset()
                 mediaPlayer.setDataSource(fd.fileDescriptor,fd.startOffset,fd.length)
