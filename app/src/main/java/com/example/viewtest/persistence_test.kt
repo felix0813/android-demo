@@ -10,20 +10,11 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.example.viewtest.newclass.sqlhelper
 import java.io.*
 
 class persistence_test : BaseActivity() {
-    inner class sqlhelper(val context :Context,val name :String,val version:Int):SQLiteOpenHelper(context,name,null,version){
-        private val sql=" create table if not exists table1( name text not null,phone text not null)"
-        override fun onCreate(db: SQLiteDatabase?) {
-            db?.execSQL(sql)
-            Toast.makeText(context,"create successfully",Toast.LENGTH_SHORT).show()
-        }
 
-        override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-
-        }
-    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_persistence_test)
@@ -92,7 +83,7 @@ class persistence_test : BaseActivity() {
 
 
         }
-        val dbhelper=sqlhelper(this,"db",1).writableDatabase
+        val dbhelper= sqlhelper(this,"db",1).writableDatabase
         val dbstore=findViewById<Button>(R.id.store_in_database)
         dbstore.setOnClickListener {
 
@@ -102,6 +93,7 @@ class persistence_test : BaseActivity() {
             val data=ContentValues().apply {
                 put("name",name)
                 put("phone",num)
+                put("id",num.substring(num.length-4).toInt())
             }
             dbhelper.insert(tablename,null,data)
 

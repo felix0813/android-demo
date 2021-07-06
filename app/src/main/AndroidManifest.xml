@@ -5,7 +5,7 @@
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -14,7 +14,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ViewTest">
-        <activity android:name=".read_contacts"></activity>
+        <provider
+            android:name=".newclass.MyContentProvider"
+            android:authorities="com.example.viewtest.provider"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".read_contacts" />
         <activity android:name=".persistence_test" />
         <activity android:name=".login">
             <intent-filter>
