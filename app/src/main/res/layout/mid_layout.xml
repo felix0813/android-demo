@@ -30,7 +30,18 @@
         android:ems="10"
         android:maxLines="2"
         android:text="http://www." />
+    <Button
+        android:id="@+id/dial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="拨打电话" />
 
+    <EditText
+        android:id="@+id/tel"
+        android:layout_width="match_parent"
+        android:inputType="phone"
+        android:layout_height="wrap_content"
+        android:hint="输入电话号码：例：10086" />
     <Button
         android:id="@+id/returntest"
         android:layout_width="match_parent"

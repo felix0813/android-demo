@@ -16,18 +16,7 @@
         android:layout_height="wrap_content"
         android:text="下一页面" />
 
-    <Button
-        android:id="@+id/dial"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="拨打电话" />
 
-    <EditText
-        android:id="@+id/tel"
-        android:layout_width="match_parent"
-        android:inputType="phone"
-        android:layout_height="wrap_content"
-        android:hint="输入电话号码：例：10086" />
     
 
     <Button
@@ -61,6 +50,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="读取联系人" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/camera_test_button"
+        android:text="照相机/相册测试"/>
+
+    <Button
+        android:id="@+id/multimedia_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="多媒体播放" />
 
     <ImageView
         android:id="@+id/more_fucntions"

@@ -1,6 +1,8 @@
 package com.example.viewtest
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -8,8 +10,11 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 
 class mid_activity : BaseActivity() {
 
@@ -18,7 +23,26 @@ class mid_activity : BaseActivity() {
         setContentView(R.layout.mid_layout)
         load_toolbar()
 
+        val button4: Button =findViewById(R.id.dial)
+        button4.setOnClickListener{
 
+            val tel=findViewById<TextView>(R.id.tel).text.toString()
+            if(tel.length!=5&&tel.length!=8&&tel.length!=11){
+                val intent2 =Intent(this,tel_warn_activity::class.java)
+                intent2.putExtra("tel",tel)
+                startActivity(intent2)
+            }else{
+                if(ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED){
+                    ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE),1)
+                }
+                else {
+                    val intent = Intent(Intent.ACTION_CALL)
+                    intent.data = Uri.parse("tel:$tel")
+                    startActivity(intent)
+                }
+            }
+            Log.d("info","jump to phone call")
+        }
         val button2: Button =findViewById(R.id.httpstest)
         button2.setOnClickListener{//将网址传给第三个activity
 

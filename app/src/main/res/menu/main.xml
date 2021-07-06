@@ -6,6 +6,7 @@
         app:showAsAction="always" />
     <item android:id="@+id/add_item" android:title="add" />
     <item android:id="@+id/remove_item" android:title="remove" />
+    <item android:id="@+id/notification" android:title="notification" />
     <item android:id="@+id/exit" android:title="Exit" />
     <item android:id="@+id/offline" android:title="Offline" />
 </menu>

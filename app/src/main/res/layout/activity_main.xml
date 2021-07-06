@@ -14,18 +14,7 @@
         android:layout_height="wrap_content"
         android:text="下一页面" />
 
-    <Button
-        android:id="@+id/dial"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="拨打电话" />
 
-    <EditText
-        android:id="@+id/tel"
-        android:layout_width="match_parent"
-        android:inputType="phone"
-        android:layout_height="wrap_content"
-        android:hint="输入电话号码：例：10086" />
 
     <Button
         android:id="@+id/life_lauch"

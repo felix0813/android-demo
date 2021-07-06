@@ -38,26 +38,7 @@ class MainActivity : BaseActivity() {
             Log.d("info","click")
         }
 
-        val button4: Button =findViewById(R.id.dial)
-        button4.setOnClickListener{
 
-            val tel=findViewById<TextView>(R.id.tel).text.toString()
-            if(tel.length!=5&&tel.length!=8&&tel.length!=11){
-                val intent2 =Intent(this,tel_warn_activity::class.java)
-                intent2.putExtra("tel",tel)
-                startActivity(intent2)
-            }else{
-                if(ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE)!=PackageManager.PERMISSION_GRANTED){
-                    ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE),1)
-                }
-                else {
-                    val intent = Intent(Intent.ACTION_CALL)
-                    intent.data = Uri.parse("tel:$tel")
-                    startActivity(intent)
-                }
-            }
-            Log.d("info","jump to phone call")
-        }
 
         val life_lauch=findViewById<Button>(R.id.life_lauch)
         life_lauch.setOnClickListener {
@@ -88,6 +69,14 @@ class MainActivity : BaseActivity() {
         val read_contacts_button=findViewById<Button>(R.id.read_contacts_button)
         read_contacts_button.setOnClickListener {
             startActivity(Intent(this,read_contacts::class.java))
+        }
+        val camera_test=findViewById<Button>(R.id.camera_test_button)
+        camera_test.setOnClickListener {
+            startActivity(Intent(this,com.example.viewtest.camera_test::class.java))
+        }
+        val multimedia_button=findViewById<Button>(R.id.multimedia_button)
+            multimedia_button.setOnClickListener{
+                startActivity(Intent(this,multimedia_test::class.java))
         }
     }
 
