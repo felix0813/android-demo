@@ -1,9 +1,8 @@
 package com.example.viewtest
 
-import androidx.appcompat.app.AppCompatActivity
+
 import android.os.Bundle
 import android.widget.Button
-import androidx.fragment.app.Fragment
 import com.example.viewtest.newclass.AnotherRightFragment
 import com.example.viewtest.newclass.NullFragment
 import com.example.viewtest.newclass.RightFragment

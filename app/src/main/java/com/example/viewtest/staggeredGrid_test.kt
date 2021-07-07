@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.viewtest.adapter.GridAdapter
-import com.example.viewtest.adapter.recyclerFruitAdapter
 import com.example.viewtest.newclass.Fruit
 
 class staggeredGrid_test : BaseActivity() {

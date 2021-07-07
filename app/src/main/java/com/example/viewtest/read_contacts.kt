@@ -2,10 +2,8 @@ package com.example.viewtest
 
 import android.Manifest
 import android.content.pm.PackageManager
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.ContactsContract
-import android.system.Os.close
 import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.ListView

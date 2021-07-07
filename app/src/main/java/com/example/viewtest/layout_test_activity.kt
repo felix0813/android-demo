@@ -1,11 +1,10 @@
 package com.example.viewtest
 
-import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
+
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
-import androidx.annotation.RequiresApi
+
 
 class layout_test_activity : BaseActivity() {
 

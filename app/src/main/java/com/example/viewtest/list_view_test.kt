@@ -8,7 +8,6 @@ import com.example.viewtest.newclass.Fruit
 
 class list_view_test : BaseActivity() {
     private val fruit_list= ArrayList<Fruit>()
-    private val list= mutableListOf<String>("Apple","Apricot","Blackberry","Blueberry","Crabapple","Grapefruit","Kiwifruit","Banana","orange","Watermelon","Plum","Peach","Pear","Grape","Pineapple","Strawberry","Cherry","Mango","Orange")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

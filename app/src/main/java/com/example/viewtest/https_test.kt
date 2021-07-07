@@ -2,12 +2,10 @@ package com.example.viewtest
 
 import android.content.Intent
 import android.net.Uri
-import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import androidx.annotation.RequiresApi
+
 
 class https_test : BaseActivity() {
 
@@ -23,7 +21,7 @@ class https_test : BaseActivity() {
         button3.setOnClickListener{//响应https网址
             //Toast.makeText(this,"Button1",Toast.LENGTH_LONG).show()
             //finish()
-            val intent: Intent = Intent(Intent.ACTION_VIEW)
+            val intent = Intent(Intent.ACTION_VIEW)
 
             intent.data= Uri.parse(website)
             startActivity(intent)

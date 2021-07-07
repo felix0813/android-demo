@@ -14,11 +14,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ViewTest">
+        android:theme="@style/Theme.ViewTest"
+        tools:ignore="AllowBackup">
         <service
             android:name=".newclass.AllService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true"
+            tools:ignore="ExportedService" />
 
         <activity android:name=".multimedia_test" />
         <activity android:name=".camera_test" />
@@ -36,7 +38,8 @@
             android:name=".newclass.MyContentProvider"
             android:authorities="com.example.viewtest.provider"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="ExportedContentProvider" />
 
         <activity android:name=".read_contacts" />
         <activity android:name=".persistence_test" />

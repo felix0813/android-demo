@@ -3,21 +3,16 @@ package com.example.viewtest
 import android.app.*
 import android.content.*
 import android.graphics.BitmapFactory
-import android.os.Binder
 import android.os.Build
 import android.os.Bundle
-import android.os.IBinder
-import android.renderscript.ScriptGroup
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
-import androidx.annotation.ContentView
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
-import com.example.viewtest.newclass.AllService
+
 
 
 open class BaseActivity : AppCompatActivity() {
