@@ -80,7 +80,7 @@ class persistence_test : BaseActivity() {
 
 
         }
-        val dbhelper= sqlhelper(this,"db",1).writableDatabase
+        val dbhelper= sqlhelper(this,"db",2).writableDatabase
         val dbstore=findViewById<Button>(R.id.store_in_database)
         dbstore.setOnClickListener {
 
