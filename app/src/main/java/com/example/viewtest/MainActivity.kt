@@ -63,7 +63,7 @@ class MainActivity : BaseActivity() {
         }
         val chat_test=findViewById<Button>(R.id.chat_test)
         chat_test.setOnClickListener {
-            startActivity(Intent(this,make_9Patch::class.java))
+            startActivity(Intent(this,chat_test::class.java))
         }
         val news_test_button=findViewById<Button>(R.id.news_test_button)
         news_test_button.setOnClickListener {

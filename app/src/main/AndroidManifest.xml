@@ -64,7 +64,7 @@
         <activity android:name=".news_content" />
         <activity android:name=".news_test" />
         <activity android:name=".Fragment_test" />
-        <activity android:name=".make_9Patch" />
+        <activity android:name=".chat_test" />
         <activity android:name=".grid_test" />
         <activity android:name=".staggeredGrid_test" />
         <activity android:name=".recyclerview_test" />
@@ -95,11 +95,11 @@
                 <category android:name="com.example.activitytest.MY_CATEGORY" />
             </intent-filter>
         </activity>
-        <activity android:name=".img_test_activity" />
+        <activity android:name=".image_test" />
         <activity android:name=".CallbackActivity" />
-        <activity android:name=".layout_test_activity" />
+        <activity android:name=".relativelayout_test" />
         <activity
-            android:name=".tel_warn_activity"
+            android:name=".tel_num_warn"
             android:theme="@style/Theme.AppCompat.Dialog" />
         <activity android:name=".MainActivity">
             <intent-filter>

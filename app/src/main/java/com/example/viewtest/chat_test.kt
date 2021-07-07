@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.viewtest.adapter.msgAdapter
 import com.example.viewtest.newclass.Msg
 
-class make_9Patch : BaseActivity() {
+class chat_test : BaseActivity() {
     private val msg_list= ArrayList<Msg>()
     override fun onCreate(savedInstanceState: Bundle?) {
         msg_list.add(Msg("This is the felix's chat test", Msg.TYPE_RECEIVE))

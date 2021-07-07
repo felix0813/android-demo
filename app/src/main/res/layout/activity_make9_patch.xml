@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#d8e0e8"
     android:orientation="vertical"
-    tools:context=".make_9Patch">
+    tools:context=".chat_test">
 <include layout="@layout/sub_toolbar"/>
 
     <androidx.recyclerview.widget.RecyclerView

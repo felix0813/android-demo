@@ -25,7 +25,7 @@ class mid_activity : BaseActivity() {
 
             val tel=findViewById<TextView>(R.id.tel).text.toString()
             if(tel.length!=5&&tel.length!=8&&tel.length!=11){
-                val intent2 =Intent(this,tel_warn_activity::class.java)
+                val intent2 =Intent(this,tel_num_warn::class.java)
                 intent2.putExtra("tel",tel)
                 startActivity(intent2)
             }else{
@@ -65,12 +65,12 @@ class mid_activity : BaseActivity() {
         }
         val layout_test=findViewById<Button>(R.id.layout_test)
         layout_test.setOnClickListener {
-            val intent=Intent(this,layout_test_activity::class.java)
+            val intent=Intent(this,relativelayout_test::class.java)
             startActivity(intent)
         }
         val img_test: Button =findViewById(R.id.img_test)
         img_test.setOnClickListener {
-            val intent=Intent(this,img_test_activity::class.java)
+            val intent=Intent(this,image_test::class.java)
             startActivity(intent)
         }
         val button7: Button =findViewById(R.id.returntest)

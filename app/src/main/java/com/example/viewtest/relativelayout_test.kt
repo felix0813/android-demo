@@ -6,7 +6,7 @@ import android.widget.Button
 import android.widget.Toast
 
 
-class layout_test_activity : BaseActivity() {
+class relativelayout_test : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
