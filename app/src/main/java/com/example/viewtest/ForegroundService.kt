@@ -9,7 +9,7 @@ import androidx.core.app.NotificationCompat
 
 
 open class ForegroundService:BaseService() {
-    lateinit var notification: Notification
+
     override fun onCreate() {
         super.onCreate()
         val manager=getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
@@ -21,7 +21,7 @@ open class ForegroundService:BaseService() {
         intent.addCategory(Intent.CATEGORY_LAUNCHER)
         intent.setClass(this,login::class.java)
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED)
-        notification= NotificationCompat.Builder(this,"foregroundService").
+        val notification= NotificationCompat.Builder(this,"foregroundService").
         setSmallIcon(R.drawable.small_icon).setLargeIcon(BitmapFactory.decodeResource(resources,R.drawable.large_icon)).
         setContentTitle("${javaClass.simpleName} in Felix's test").
         setContentText("This the is notification of foreground service of felix's test").
