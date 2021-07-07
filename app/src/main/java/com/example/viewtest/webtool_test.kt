@@ -30,5 +30,13 @@ class webtool_test : BaseActivity() {
         xml_sax_test_button.setOnClickListener {
             startActivity(Intent(this,xml_sax_test::class.java))
         }
+        val jsonobject_test_button=findViewById<Button>(R.id.jsonobject_test_button)
+        jsonobject_test_button.setOnClickListener {
+            startActivity(Intent(this,jsonobject_test::class.java))
+        }
+        val gson_test_button=findViewById<Button>(R.id.gson_test_button)
+        gson_test_button.setOnClickListener {
+            startActivity(Intent(this,gson_test::class.java))
+        }
     }
 }

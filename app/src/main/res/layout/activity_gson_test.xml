@@ -5,15 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".xml_pull_test">
-
-    <include layout="@layout/sub_toolbar" />
+    tools:context=".gson_test">
+    <include layout="@layout/sub_toolbar"/>
 
     <Button
-        android:id="@+id/send_and_saxparse"
+        android:id="@+id/send_and_gson"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="发送请求并解析结果"
+        android:text="发送并请求解析" />
 
-        />
 </LinearLayout>

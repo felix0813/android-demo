@@ -18,7 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ViewTest"
         tools:ignore="AllowBackup">
-        <activity android:name=".xml_sax_test"></activity>
+        <activity android:name=".gson_test"></activity>
+        <activity android:name=".jsonobject_test" />
+        <activity android:name=".xml_sax_test" />
         <activity android:name=".xml_pull_test" />
         <activity android:name=".okhttp_test" />
         <activity android:name=".httpurlconnection_test" />

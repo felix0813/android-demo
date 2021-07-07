@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".xml_pull_test">
 
     <include
-        android:id="@+id/xmlpull_include"
         layout="@layout/sub_toolbar" />
 
     <Button
         android:id="@+id/send_and_pullparse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="发送请求并解析结果"
-        app:layout_constraintTop_toBottomOf="@+id/xmlpull_include"
-         />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:text="发送请求并解析结果" />
+</LinearLayout>

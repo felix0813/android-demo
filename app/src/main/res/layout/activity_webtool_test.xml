@@ -35,4 +35,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Xmlsax解析测试" />
+
+    <Button
+        android:id="@+id/jsonobject_test_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="jsonobject测试" />
+
+    <Button
+        android:id="@+id/gson_test_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="gson测试" />
 </LinearLayout>
