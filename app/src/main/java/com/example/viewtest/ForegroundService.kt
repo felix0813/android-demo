@@ -1,16 +1,12 @@
 package com.example.viewtest
-
 import android.app.*
 import android.content.Context
 import android.content.Intent
 import android.content.Intent.ACTION_MAIN
 import android.graphics.BitmapFactory
 import android.os.Build
-import android.os.Bundle
-import android.util.Log
 import androidx.core.app.NotificationCompat
-import androidx.core.content.getSystemService
-import kotlin.concurrent.thread
+
 
 open class ForegroundService:BaseService() {
     lateinit var notification: Notification
@@ -36,7 +32,5 @@ open class ForegroundService:BaseService() {
         startForeground(2,notification)
 
     }
-    fun get_top_activity(){
 
-    }
 }
