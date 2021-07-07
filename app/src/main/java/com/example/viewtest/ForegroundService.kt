@@ -1,16 +1,19 @@
 package com.example.viewtest
 
-import android.app.NotificationChannel
-import android.app.NotificationManager
-import android.app.PendingIntent
+import android.app.*
 import android.content.Context
 import android.content.Intent
+import android.content.Intent.ACTION_MAIN
 import android.graphics.BitmapFactory
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import androidx.core.app.NotificationCompat
+import androidx.core.content.getSystemService
+import kotlin.concurrent.thread
 
 open class ForegroundService:BaseService() {
+    lateinit var notification: Notification
     override fun onCreate() {
         super.onCreate()
         val manager=getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
@@ -18,13 +21,22 @@ open class ForegroundService:BaseService() {
             val channel=NotificationChannel("foregroundService","前台服务通知",NotificationManager.IMPORTANCE_DEFAULT)
             manager.createNotificationChannel(channel)
         }
-        val notification= NotificationCompat.Builder(this,"foregroundService").
+        val intent=Intent(ACTION_MAIN)
+        intent.addCategory(Intent.CATEGORY_LAUNCHER)
+        intent.setClass(this,login::class.java)
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED)
+        notification= NotificationCompat.Builder(this,"foregroundService").
         setSmallIcon(R.drawable.small_icon).setLargeIcon(BitmapFactory.decodeResource(resources,R.drawable.large_icon)).
         setContentTitle("${javaClass.simpleName} in Felix's test").
         setContentText("This the is notification of foreground service of felix's test").
-        setContentIntent(PendingIntent.getActivity(this,0, Intent(this,MainActivity::class.java),0)).
+        setContentIntent(PendingIntent.getActivity(this,0, intent,0)).
         setAutoCancel(true).
         build()
+
         startForeground(2,notification)
+
+    }
+    fun get_top_activity(){
+
     }
 }

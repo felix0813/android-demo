@@ -1,13 +1,12 @@
 package com.example.viewtest
 
 import android.app.*
-import android.content.BroadcastReceiver
-import android.content.Context
-import android.content.Intent
-import android.content.IntentFilter
+import android.content.*
 import android.graphics.BitmapFactory
+import android.os.Binder
 import android.os.Build
 import android.os.Bundle
+import android.os.IBinder
 import android.renderscript.ScriptGroup
 import android.util.Log
 import android.view.Menu
@@ -18,9 +17,13 @@ import androidx.annotation.ContentView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
+import com.example.viewtest.newclass.AllService
 
 
 open class BaseActivity : AppCompatActivity() {
+
+
+
     private lateinit var receiver:offlineReceiver
     private lateinit var the_menu: Menu
     private lateinit var manager:NotificationManager
@@ -45,24 +48,29 @@ open class BaseActivity : AppCompatActivity() {
         IntentFilter.addAction("offline")
         receiver=offlineReceiver()
         registerReceiver(receiver,IntentFilter)
+
+
     }
 
     override fun onPause() {
         super.onPause()
         unregisterReceiver(receiver)
+
     }
     override fun onCreate(savedInstanceState:Bundle?){
         super.onCreate(savedInstanceState)
 
         Log.e("felix",javaClass.simpleName)
         ActivityCollector.add(this)
-
     }
 
     override fun onDestroy() {
         super.onDestroy()
         ActivityCollector.remove(this)
+
     }
+
+
 
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

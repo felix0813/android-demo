@@ -3,7 +3,7 @@ package com.example.viewtest
 import android.app.Activity
 
 object ActivityCollector {
-    private val activities=ArrayList<Activity>()
+    val activities=ArrayList<Activity>()
     fun add(activity: Activity){
         activities.add(activity)
     }

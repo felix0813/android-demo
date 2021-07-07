@@ -24,7 +24,9 @@ open class BaseService : Service() {
         super.onDestroy()
         Log.e("service","${javaClass.simpleName} destroy")
     }
+
     override fun onBind(intent: Intent?): IBinder? {
         return binder
     }
+
 }
