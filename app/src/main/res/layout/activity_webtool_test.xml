@@ -24,4 +24,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="okhttp测试" />
+
+    <Button
+        android:id="@+id/xml_pull_test_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xmlpull解析测试" />
 </LinearLayout>

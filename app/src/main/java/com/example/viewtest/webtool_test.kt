@@ -22,5 +22,9 @@ class webtool_test : BaseActivity() {
         okhttp_test_button.setOnClickListener {
             startActivity(Intent(this,okhttp_test::class.java))
         }
+        val xml_pull_test_button=findViewById<Button>(R.id.xml_pull_test_button)
+        xml_pull_test_button.setOnClickListener {
+            startActivity(Intent(this,xml_pull_test::class.java))
+        }
     }
 }

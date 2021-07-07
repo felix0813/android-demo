@@ -43,18 +43,15 @@ open class BaseActivity : AppCompatActivity() {
         IntentFilter.addAction("offline")
         receiver=offlineReceiver()
         registerReceiver(receiver,IntentFilter)
-
-
     }
 
     override fun onPause() {
         super.onPause()
         unregisterReceiver(receiver)
-
     }
+
     override fun onCreate(savedInstanceState:Bundle?){
         super.onCreate(savedInstanceState)
-
         Log.e("felix",javaClass.simpleName)
         ActivityCollector.add(this)
     }
@@ -62,19 +59,16 @@ open class BaseActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         ActivityCollector.remove(this)
-
     }
 
 
 
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        Log.e("felix","menu")
         menuInflater.inflate(R.menu.main,menu)
         if (menu != null) {
             the_menu=menu
         }
-
         return true
     }
 
@@ -95,9 +89,7 @@ open class BaseActivity : AppCompatActivity() {
                     build()
                 manager.notify(1,notification)
             }
-
         }
-
         return true
     }
 
@@ -125,10 +117,5 @@ open class BaseActivity : AppCompatActivity() {
             setSupportActionBar(findViewById(R.id.main_tool_bar))
             supportActionBar?.setTitle("")
         }
-
-
     }
-
-
-
 }
