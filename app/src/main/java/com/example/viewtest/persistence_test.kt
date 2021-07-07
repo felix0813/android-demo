@@ -57,18 +57,14 @@ class persistence_test : BaseActivity() {
         }
         val sharedPreference=findViewById<Button>(R.id.sharedpreference)
         sharedPreference.setOnClickListener {
-            val editor=getSharedPreferences("phone",Context.MODE_PRIVATE).edit()
-            val reader=getSharedPreferences("phone",Context.MODE_PRIVATE)
+            val editor=getSharedPreferences("users",Context.MODE_PRIVATE).edit()
+            val reader=getSharedPreferences("users",Context.MODE_PRIVATE)
             val pair=get_edittext()
             if(reader.contains(pair.first)){
                 AlertDialog.Builder(this).apply {
                     setTitle("名字重复")
-                    setMessage("你可以在名字后面加上一个数字来解决这个问题,或者选择替换号码")
-                    setPositiveButton("替换"){_,_->
-                        editor.putString(pair.first,pair.second)
-                        editor.apply()
-                    }
-                    setNegativeButton("取消"){_,_->
+                    setMessage("你需要更换一个用户名")
+                    setNegativeButton("OK"){_,_->
                     }
                     show()
                 }

@@ -3,6 +3,7 @@ package com.example.viewtest
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
@@ -25,13 +26,14 @@ class login : BaseActivity() {
         login.setOnClickListener {
             val username=findViewById<EditText>(R.id.username).text.toString()
             val password=findViewById<EditText>(R.id.password).text.toString()
-            if(username=="felix"&&password=="220813"){
+            val reader2=getSharedPreferences("users",Context.MODE_PRIVATE)
+            if(reader2.contains(username)&&reader2.getString(username,";;").equals(password)){
                 val checkBox=findViewById<CheckBox>(R.id.remember_password)
                 val editor=getPreferences(Context.MODE_PRIVATE).edit()
                 if (checkBox.isChecked){
                     editor.putBoolean("isremembered",true)
-                    editor.putString("username","felix")
-                    editor.putString("password","220813")
+                    editor.putString("username",username)
+                    editor.putString("password",password)
                 }
                 else{
                     editor.clear()
