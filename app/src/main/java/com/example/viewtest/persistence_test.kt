@@ -58,6 +58,7 @@ class persistence_test : BaseActivity() {
         val sharedPreference=findViewById<Button>(R.id.sharedpreference)
         sharedPreference.setOnClickListener {
             val editor=getSharedPreferences("users",Context.MODE_PRIVATE).edit()
+            editor.putString("felix","220813")
             val reader=getSharedPreferences("users",Context.MODE_PRIVATE)
             val pair=get_edittext()
             if(reader.contains(pair.first)){

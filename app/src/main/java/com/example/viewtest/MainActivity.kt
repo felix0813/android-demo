@@ -61,8 +61,8 @@ class MainActivity : BaseActivity() {
             }
 
         }
-        val chat_test=findViewById<Button>(R.id.chat_test)
-        chat_test.setOnClickListener {
+        val chat_test_button=findViewById<Button>(R.id.chat_test)
+        chat_test_button.setOnClickListener {
             startActivity(Intent(this,chat_test::class.java))
         }
         val news_test_button=findViewById<Button>(R.id.news_test_button)
@@ -88,6 +88,10 @@ class MainActivity : BaseActivity() {
         val multimedia_button=findViewById<Button>(R.id.multimedia_button)
             multimedia_button.setOnClickListener{
                 startActivity(Intent(this,multimedia_test::class.java))
+        }
+        val web_test_button=findViewById<Button>(R.id.web_test_button)
+        web_test_button.setOnClickListener {
+            startActivity(Intent(this,web_test::class.java))
         }
     }
 

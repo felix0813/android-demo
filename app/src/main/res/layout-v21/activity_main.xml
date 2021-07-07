@@ -62,6 +62,12 @@
         android:layout_height="wrap_content"
         android:text="多媒体播放" />
 
+    <Button
+        android:id="@+id/web_test_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="网页浏览" />
+
     <ImageView
         android:id="@+id/more_fucntions"
         android:layout_width="219dp"

@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -16,6 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ViewTest"
         tools:ignore="AllowBackup">
+        <activity android:name=".web_test" />
+
         <service
             android:name=".newclass.AllService"
             android:enabled="true"

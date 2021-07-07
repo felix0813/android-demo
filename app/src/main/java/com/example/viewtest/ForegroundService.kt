@@ -26,6 +26,7 @@ open class ForegroundService:BaseService() {
         setContentTitle("${javaClass.simpleName} in Felix's test").
         setContentText("This the is notification of foreground service of felix's test").
         setContentIntent(PendingIntent.getActivity(this,0, intent,0)).
+        setNotificationSilent().
         setAutoCancel(true).
         build()
 
