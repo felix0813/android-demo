@@ -63,10 +63,10 @@
         android:text="多媒体播放" />
 
     <Button
-        android:id="@+id/web_test_button"
+        android:id="@+id/webtool_test_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="网页浏览" />
+        android:text="网络相关测试" />
 
     <ImageView
         android:id="@+id/more_fucntions"

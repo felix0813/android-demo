@@ -89,9 +89,9 @@ class MainActivity : BaseActivity() {
             multimedia_button.setOnClickListener{
                 startActivity(Intent(this,multimedia_test::class.java))
         }
-        val web_test_button=findViewById<Button>(R.id.web_test_button)
-        web_test_button.setOnClickListener {
-            startActivity(Intent(this,web_test::class.java))
+        val web_relative_test_button=findViewById<Button>(R.id.webtool_test_button)
+        web_relative_test_button.setOnClickListener {
+            startActivity(Intent(this,webtool_test::class.java))
         }
     }
 
