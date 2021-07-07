@@ -26,5 +26,9 @@ class webtool_test : BaseActivity() {
         xml_pull_test_button.setOnClickListener {
             startActivity(Intent(this,xml_pull_test::class.java))
         }
+        val xml_sax_test_button=findViewById<Button>(R.id.xml_sax_test_button)
+        xml_sax_test_button.setOnClickListener {
+            startActivity(Intent(this,xml_sax_test::class.java))
+        }
     }
 }
