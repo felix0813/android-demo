@@ -1,6 +1,6 @@
 package com.example.viewtest
 
-import androidx.appcompat.app.AppCompatActivity
+
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -9,9 +9,8 @@ import com.example.viewtest.newclass.WebUtil
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import okhttp3.*
-import org.json.JSONArray
 import java.io.IOException
-import kotlin.concurrent.thread
+
 
 class gson_test : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -8,12 +8,9 @@ import com.example.viewtest.newclass.WebUtil
 import com.example.viewtest.newclass.saxHandler
 import okhttp3.*
 import org.xml.sax.InputSource
-import org.xml.sax.helpers.DefaultHandler
 import java.io.IOException
 import java.io.StringReader
-import java.lang.StringBuilder
 import javax.xml.parsers.SAXParserFactory
-import kotlin.concurrent.thread
 
 class xml_sax_test : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

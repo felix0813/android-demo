@@ -18,7 +18,6 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.viewtest.newclass.AllService
 import com.google.android.material.navigation.NavigationView
-import org.w3c.dom.Text
 
 class MainActivity : BaseActivity() {
     lateinit var binder: Binder
@@ -126,7 +125,7 @@ class MainActivity : BaseActivity() {
                 R.id.cancel_user_item->{
                     AlertDialog.Builder(this).setTitle("警告").setMessage("你确认要注销账号？").setNegativeButton("取消",null).
                     setPositiveButton("确认"){_,_->
-                        val editor=getSharedPreferences("users",Context.MODE_PRIVATE).edit(){
+                        getSharedPreferences("users",Context.MODE_PRIVATE).edit(){
                             remove(read_user.getString("current_user","null"))
                             apply()
                         }

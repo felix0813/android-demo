@@ -15,7 +15,7 @@ class change_password_dialog : BaseActivity() {
         vbinding.ensurePassword.setOnClickListener {
             val read_user=getSharedPreferences("login", Context.MODE_PRIVATE)
             val cur_user=read_user.getString("current_user","null")
-            val editor=getSharedPreferences("users",Context.MODE_PRIVATE).edit{
+            getSharedPreferences("users",Context.MODE_PRIVATE).edit{
                 putString(cur_user,vbinding.newPassword.text.toString())
                 apply()
             }

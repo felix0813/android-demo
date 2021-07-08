@@ -18,62 +18,63 @@
         android:id="@+id/next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="下一页面" />
+        android:text="@string/下一页面" />
     <Button
         android:id="@+id/life_lauch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="lifecyle/lauchmode测试" />
+        android:text="@string/其他测试" />
     <Button
         android:id="@+id/chat_test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="聊天测试" />
+        android:text="@string/聊天测试" />
     <Button
         android:id="@+id/news_test_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="新闻测试" />
+        android:text="@string/新闻测试" />
     <Button
         android:id="@+id/broadcast_test_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="广播测试" />
+        android:text="@string/广播测试" />
     <Button
         android:id="@+id/persistence_test_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="持久化测试" />
+        android:text="@string/持久化测试" />
 
     <Button
         android:id="@+id/read_contacts_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="读取联系人" />
+        android:text="@string/读取联系人" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/camera_test_button"
-        android:text="照相机/相册测试"/>
+        android:text="@string/照相机and相册测试"/>
 
     <Button
         android:id="@+id/multimedia_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="多媒体播放" />
+        android:text="@string/多媒体播放" />
 
     <Button
         android:id="@+id/webtool_test_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="网络相关测试" />
+        android:text="@string/网络相关测试" />
 
     <ImageView
         android:id="@+id/more_fucntions"
         android:layout_width="219dp"
         android:layout_height="141dp"
         android:layout_gravity="center"
-        android:src="@drawable/more_functions" />
+        android:src="@drawable/more_functions"
+        android:contentDescription="@string/more_functions_to_be_implemented" />
     </LinearLayout>
     <com.google.android.material.navigation.NavigationView
         android:layout_width="300dp"

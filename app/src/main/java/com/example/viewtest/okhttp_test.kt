@@ -8,7 +8,6 @@ import android.widget.TextView
 import com.example.viewtest.newclass.WebUtil
 import okhttp3.*
 import java.io.IOException
-import kotlin.concurrent.thread
 
 class okhttp_test : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

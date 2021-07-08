@@ -9,7 +9,6 @@ import org.xmlpull.v1.XmlPullParser
 import org.xmlpull.v1.XmlPullParserFactory
 import java.io.IOException
 import java.io.StringReader
-import kotlin.concurrent.thread
 
 class xml_pull_test : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

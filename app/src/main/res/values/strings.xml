@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">ViewTest</string>
+    <string name="more_functions_to_be_implemented">more functions to be implemented</string>
+    <string name="网络相关测试">网络相关测试</string>
+    <string name="多媒体播放">多媒体播放</string>
+    <string name="照相机and相册测试">照相机/相册测试</string>
+    <string name="读取联系人">读取联系人</string>
+    <string name="持久化测试">持久化测试</string>
+    <string name="广播测试">广播测试</string>
+    <string name="新闻测试">新闻测试</string>
+    <string name="聊天测试">聊天测试</string>
+    <string name="其他测试">其他测试</string>
+    <string name="下一页面">下一页面</string>
 </resources>
