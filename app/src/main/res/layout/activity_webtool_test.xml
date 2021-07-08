@@ -47,4 +47,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="gson测试" />
+
+    <Button
+        android:id="@+id/retrofit_test_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="retrofit测试" />
 </LinearLayout>

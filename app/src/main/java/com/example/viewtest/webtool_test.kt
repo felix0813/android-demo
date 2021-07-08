@@ -38,5 +38,9 @@ class webtool_test : BaseActivity() {
         gson_test_button.setOnClickListener {
             startActivity(Intent(this,gson_test::class.java))
         }
+        val retrofit_test_button=findViewById<Button>(R.id.retrofit_test_button)
+        retrofit_test_button.setOnClickListener {
+            startActivity(Intent(this,retrofit_test::class.java))
+        }
     }
 }
