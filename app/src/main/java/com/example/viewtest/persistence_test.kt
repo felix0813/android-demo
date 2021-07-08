@@ -22,7 +22,7 @@ class persistence_test : BaseActivity() {
                 val output=openFileOutput("data", MODE_APPEND)
                 val writer=BufferedWriter(OutputStreamWriter(output))
                 val pair=get_edittext()
-                if(pair.first.length<=10&&pair.second.length<=10&&!pair.first.contains(' ')&&!pair.second.contains(' ')){
+                if(pair.first.length<=10&&pair.second.length<=10&&!pair.first.contains(' ')&&!pair.second.contains(' ')&&!(pair.first.equals("")||pair.second.equals(""))){
                     val input=openFileInput("data")
                     val reader=BufferedReader(InputStreamReader(input))
                     var repeat=false
@@ -61,7 +61,7 @@ class persistence_test : BaseActivity() {
             editor.putString("felix","220813")
             val reader=getSharedPreferences("users",Context.MODE_PRIVATE)
             val pair=get_edittext()
-            if(reader.contains(pair.first)){
+            if(reader.contains(pair.first)&&pair.first.equals("")){
                 AlertDialog.Builder(this).apply {
                     setTitle("名字重复")
                     setMessage("你需要更换一个用户名")
@@ -84,12 +84,14 @@ class persistence_test : BaseActivity() {
             val tablename=findViewById<EditText>(R.id.tablename).text.toString()
             val name=findViewById<EditText>(R.id.value1).text.toString()
             val num=findViewById<EditText>(R.id.value2).text.toString()
-            val data=ContentValues().apply {
-                put("name",name)
-                put("phone",num)
-                put("id",num.substring(num.length-4).toInt())
+            if(!name.equals("")&&!num.equals("")) {
+                val data = ContentValues().apply {
+                    put("name", name)
+                    put("phone", num)
+                    put("id", num.substring(num.length - 4).toInt())
+                }
+                dbhelper.insert(tablename, null, data)
             }
-            dbhelper.insert(tablename,null,data)
 
         }
     }
