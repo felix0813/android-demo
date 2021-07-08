@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:background="#4F4F4F"
     android:title=""
-
+    android:keepScreenOn="true"
     android:minHeight="?attr/actionBarSize"
     tools:ignore="NewApi">
 

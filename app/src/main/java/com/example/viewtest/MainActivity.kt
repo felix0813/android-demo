@@ -1,5 +1,6 @@
 package com.example.viewtest
 
+
 import android.app.AlertDialog
 import android.content.ComponentName
 import android.content.Context
@@ -12,10 +13,12 @@ import android.os.Bundle
 import android.os.IBinder
 import android.util.Log
 import android.widget.*
+import androidx.core.content.edit
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import com.example.viewtest.databinding.ActivityMainBinding
 import com.example.viewtest.newclass.AllService
+import com.google.android.material.navigation.NavigationView
+import org.w3c.dom.Text
 
 class MainActivity : BaseActivity() {
     lateinit var binder: Binder
@@ -44,14 +47,14 @@ class MainActivity : BaseActivity() {
         setContentView(R.layout.activity_main)
         load_toolbar()
         val read_user=getSharedPreferences("login",Context.MODE_PRIVATE)
-        val drawertext=findViewById<TextView>(R.id.drawer_text)
-        val newtext="当前用户：${read_user.getString("current_user","fail")}"
-        drawertext.text=newtext
+        //val drawertext=findViewById<TextView>(R.id.drawer_text)
+        //val newtext="当前用户：${read_user.getString("current_user","fail")}"
+        //drawertext.text=newtext
 
-        val change_password=findViewById<Button>(R.id.change_password)
+        /*val change_password=findViewById<Button>(R.id.change_password)
         change_password.setOnClickListener {
             startActivity(Intent(this,change_password_dialog::class.java))
-        }
+        }*/
 
         val take_drawer_out=findViewById<ImageButton>(R.id.main_drawer_button)
         take_drawer_out.setOnClickListener {
@@ -112,6 +115,31 @@ class MainActivity : BaseActivity() {
         val web_relative_test_button=findViewById<Button>(R.id.webtool_test_button)
         web_relative_test_button.setOnClickListener {
             startActivity(Intent(this,webtool_test::class.java))
+        }
+
+        val navView=findViewById<NavigationView>(R.id.navView)
+        val header=navView.getHeaderView(0)
+        header.findViewById<TextView>(R.id.user_text).setText(read_user.getString("current_user","null"))
+
+        navView.setNavigationItemSelectedListener {
+            when(it.itemId){
+                R.id.cancel_user_item->{
+                    AlertDialog.Builder(this).setTitle("警告").setMessage("你确认要注销账号？").setNegativeButton("取消",null).
+                    setPositiveButton("确认"){_,_->
+                        val editor=getSharedPreferences("users",Context.MODE_PRIVATE).edit(){
+                            remove(read_user.getString("current_user","null"))
+                            apply()
+                        }
+                        sendBroadcast(Intent("offline"))
+                    }.show()
+                    true
+                }
+                R.id.change_password_item->{
+                    startActivity(Intent(this,change_password_dialog::class.java))
+                    true
+                }
+                else-> true
+            }
         }
     }
 
