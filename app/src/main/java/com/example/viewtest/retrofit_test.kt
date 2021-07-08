@@ -23,7 +23,7 @@ class retrofit_test : BaseActivity() {
         setContentView(binding.root)
         load_toolbar()
         binding.getAppData.setOnClickListener {
-            val appservice=ServiceCreator.create<AppService>("http://10.0.0.2/")
+            val appservice=ServiceCreator.create<AppService>("http://10.0.2.2/")
             appservice.get_json_data().enqueue(object :Callback<List<App>>{
                 override fun onResponse(call: Call<List<App>>, response: Response<List<App>>) {
                     val list=response.body()
