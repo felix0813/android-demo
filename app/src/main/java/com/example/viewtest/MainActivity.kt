@@ -1,5 +1,6 @@
 package com.example.viewtest
 
+import android.app.AlertDialog
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
@@ -12,7 +13,9 @@ import android.os.IBinder
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
+import com.example.viewtest.databinding.ActivityMainBinding
 import com.example.viewtest.newclass.AllService
 
 class MainActivity : BaseActivity() {
@@ -35,9 +38,21 @@ class MainActivity : BaseActivity() {
 
         super.onCreate(savedInstanceState)
 
+
+
         bindService(Intent(this, AllService::class.java),connection, Context.BIND_AUTO_CREATE)
         setContentView(R.layout.activity_main)
         load_toolbar()
+        val read_user=getSharedPreferences("login",Context.MODE_PRIVATE)
+        val drawertext=findViewById<TextView>(R.id.drawer_text)
+        val newtext="当前用户：${read_user.getString("current_user","fail")}"
+        drawertext.text=newtext
+
+        val change_password=findViewById<Button>(R.id.change_password)
+        change_password.setOnClickListener {
+            startActivity(Intent(this,change_password_dialog::class.java))
+        }
+
         val button1: Button =findViewById(R.id.next)
 
 

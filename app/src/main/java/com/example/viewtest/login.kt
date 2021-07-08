@@ -5,10 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.EditText
-import android.widget.Toast
+import android.widget.*
 
 class login : BaseActivity() {
     @SuppressLint("CutPasteId")
@@ -30,6 +27,7 @@ class login : BaseActivity() {
             if(reader2.contains(username)&&reader2.getString(username,";;").equals(password)||(username=="felix"&&password=="220813")){
                 val checkBox=findViewById<CheckBox>(R.id.remember_password)
                 val editor=getPreferences(Context.MODE_PRIVATE).edit()
+                editor.putString("current_user",username)
                 if (checkBox.isChecked){
                     editor.putBoolean("isremembered",true)
                     editor.putString("username",username)

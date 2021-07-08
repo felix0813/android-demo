@@ -18,7 +18,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ViewTest"
         tools:ignore="AllowBackup">
-        <activity android:name=".retrofit_test"></activity>
+        <activity android:name=".change_password_dialog" android:theme="@style/Theme.AppCompat.Dialog"/>
+
+
+        <activity android:name=".retrofit_test" />
         <activity android:name=".gson_test" />
         <activity android:name=".jsonobject_test" />
         <activity android:name=".xml_sax_test" />

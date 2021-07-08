@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
@@ -108,7 +109,8 @@ open class BaseActivity : AppCompatActivity() {
         if(javaClass.simpleName!="MainActivity"){
             setSupportActionBar(findViewById(R.id.sub_tool_bar))
             supportActionBar?.setTitle("")
-
+        val title=findViewById<TextView>(R.id.title)
+        title.setText(javaClass.simpleName)
         val go_back=findViewById<Button>(R.id.go_back)
         go_back.setOnClickListener{
             finish()
