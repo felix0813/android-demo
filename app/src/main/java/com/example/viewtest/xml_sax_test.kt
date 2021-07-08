@@ -17,8 +17,8 @@ class xml_sax_test : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_xml_sax_test)
         load_toolbar()
-        val send_and_parse=findViewById<Button>(R.id.send_and_saxparse)
-        send_and_parse.setOnClickListener {
+        val sendAndParse=findViewById<Button>(R.id.send_and_saxparse)
+        sendAndParse.setOnClickListener {
             WebUtil.sendOKHttpRequest("http://10.0.2.2/get_data.xml",object : Callback {
                 override fun onResponse(call: Call, response: Response) {
                     val data=response.body?.string()
