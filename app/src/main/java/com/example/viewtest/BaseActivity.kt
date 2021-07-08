@@ -12,7 +12,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
-
+import com.example.viewtest.newclass.ActivityCollector
 
 
 open class BaseActivity : AppCompatActivity() {
@@ -77,7 +77,7 @@ open class BaseActivity : AppCompatActivity() {
         when(item.itemId){
             R.id.add_item-> Toast.makeText(this,"Add", Toast.LENGTH_LONG).show()
             R.id.remove_item-> Toast.makeText(this,"Remove", Toast.LENGTH_LONG).show()
-            R.id.exit->ActivityCollector.exit()
+            R.id.exit-> ActivityCollector.exit()
             R.id.offline->sendBroadcast(Intent("offline"))
             R.id.notification->{
                 val notification=NotificationCompat.Builder(this,"normal").

@@ -5,6 +5,7 @@ import android.util.Log
 import com.example.viewtest.databinding.ActivityRetrofitTestBinding
 import com.example.viewtest.newclass.App
 import com.example.viewtest.newclass.AppService
+import com.example.viewtest.newclass.ServiceCreator
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -22,8 +23,7 @@ class retrofit_test : BaseActivity() {
         setContentView(binding.root)
         load_toolbar()
         binding.getAppData.setOnClickListener {
-            val retrofit=Retrofit.Builder().baseUrl("http://10.0.2.2/").addConverterFactory(GsonConverterFactory.create()).build()
-            val appservice=retrofit.create(AppService::class.java)
+            val appservice=ServiceCreator.create<AppService>("http://10.0.0.2/")
             appservice.get_json_data().enqueue(object :Callback<List<App>>{
                 override fun onResponse(call: Call<List<App>>, response: Response<List<App>>) {
                     val list=response.body()

@@ -1,4 +1,4 @@
-package com.example.viewtest
+package com.example.viewtest.newclass
 
 import android.app.Activity
 
