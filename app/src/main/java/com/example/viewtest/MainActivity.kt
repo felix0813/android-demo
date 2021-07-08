@@ -11,10 +11,9 @@ import android.os.Binder
 import android.os.Bundle
 import android.os.IBinder
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import com.example.viewtest.databinding.ActivityMainBinding
 import com.example.viewtest.newclass.AllService
 
@@ -34,6 +33,7 @@ class MainActivity : BaseActivity() {
         super.onDestroy()
         unbindService(connection)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -53,6 +53,11 @@ class MainActivity : BaseActivity() {
             startActivity(Intent(this,change_password_dialog::class.java))
         }
 
+        val take_drawer_out=findViewById<ImageButton>(R.id.main_drawer_button)
+        take_drawer_out.setOnClickListener {
+            val drawerlayout=findViewById<DrawerLayout>(R.id.main_drawerlayout)
+            drawerlayout.openDrawer(GravityCompat.START)
+        }
         val button1: Button =findViewById(R.id.next)
 
 

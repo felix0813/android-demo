@@ -10,7 +10,11 @@
     android:minHeight="?attr/actionBarSize"
     tools:ignore="NewApi">
 
-
+<ImageButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/main_drawer_button"
+    android:src="@drawable/ic_menu"/>
 
     <TextView
         android:id="@+id/title"
