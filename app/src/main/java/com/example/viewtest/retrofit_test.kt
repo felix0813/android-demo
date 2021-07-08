@@ -20,6 +20,7 @@ class retrofit_test : BaseActivity() {
         super.onCreate(savedInstanceState)
         binding= ActivityRetrofitTestBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        load_toolbar()
         binding.getAppData.setOnClickListener {
             val retrofit=Retrofit.Builder().baseUrl("http://10.0.2.2/").addConverterFactory(GsonConverterFactory.create()).build()
             val appservice=retrofit.create(AppService::class.java)
