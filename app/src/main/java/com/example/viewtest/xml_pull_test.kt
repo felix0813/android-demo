@@ -3,10 +3,11 @@ package com.example.viewtest
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import okhttp3.OkHttpClient
-import okhttp3.Request
+import com.example.viewtest.newclass.WebUtil
+import okhttp3.*
 import org.xmlpull.v1.XmlPullParser
 import org.xmlpull.v1.XmlPullParserFactory
+import java.io.IOException
 import java.io.StringReader
 import kotlin.concurrent.thread
 
@@ -17,15 +18,19 @@ class xml_pull_test : BaseActivity() {
         load_toolbar()
         val send_and_parse=findViewById<Button>(R.id.send_and_pullparse)
         send_and_parse.setOnClickListener {
-        thread {
-            val client=OkHttpClient()
-            val request=Request.Builder().url("http://10.0.2.2/get_data.xml").build()
-            val response=client.newCall(request).execute()
-            val data=response.body?.string()
-            if(data!=null){
-                parseXMLWithPull(data)
+            WebUtil.sendOKHttpRequest("http://10.0.2.2/get_data.xml",object : Callback {
+                override fun onResponse(call: Call, response: Response) {
+                    val data=response.body?.string()
+                    if(data!=null){
+                        parseXMLWithPull(data)
+                    }
+                }
+
+                override fun onFailure(call: Call, e: IOException) {
+                    Log.e("pull","fail")
+                }
             }
-        }
+            )
         }
     }
     fun parseXMLWithPull(xmldata:String){

@@ -2,10 +2,12 @@ package com.example.viewtest
 
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
-import okhttp3.OkHttpClient
-import okhttp3.Request
+import com.example.viewtest.newclass.WebUtil
+import okhttp3.*
+import java.io.IOException
 import kotlin.concurrent.thread
 
 class okhttp_test : BaseActivity() {
@@ -15,19 +17,21 @@ class okhttp_test : BaseActivity() {
         load_toolbar()
         val send_okhttp_button=findViewById<Button>(R.id.send_okhttprequest)
         send_okhttp_button.setOnClickListener {
-            send_okhttp_request()
-        }
-    }
-    fun send_okhttp_request()
-    {
-        thread {
-            val client=OkHttpClient()
-            val request=Request.Builder().url("https://www.baidu.com").build()
-            val response=client.newCall(request).execute()
-            val data=response.body?.string()
-            runOnUiThread{
-                findViewById<TextView>(R.id.okhttp_response).text = data
+            WebUtil.sendOKHttpRequest("https://www.baidu.com",object : Callback {
+                override fun onResponse(call: Call, response: Response) {
+                    val data=response.body?.string()
+                    if(data!=null){
+                        runOnUiThread{
+                            findViewById<TextView>(R.id.okhttp_response).text = data
+                        }
+                    }
+                }
+
+                override fun onFailure(call: Call, e: IOException) {
+                    Log.e("okhttp","fail")
+                }
             }
+            )
         }
     }
 }
