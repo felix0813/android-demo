@@ -6,19 +6,39 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.viewtest.adapter.CardviewFruitAdapter
 import com.example.viewtest.databinding.ActivityCardViewTestBinding
 import com.example.viewtest.newclass.Fruit
+import kotlin.concurrent.thread
 
 class CardViewTest : BaseActivity() {
     private val fruit_list=ArrayList<Fruit>()
+    lateinit var binding: ActivityCardViewTestBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding=ActivityCardViewTestBinding.inflate(layoutInflater)
+        binding=ActivityCardViewTestBinding.inflate(layoutInflater)
         setContentView(binding.root)
         load_toolbar()
         initFruits()
         val layoutManager=GridLayoutManager(this,2)
         binding.cardViewRecycler.layoutManager=layoutManager
-        binding.cardViewRecycler.adapter=CardviewFruitAdapter(this,fruit_list)
+        val adpater=CardviewFruitAdapter(this,fruit_list)
+        binding.cardViewRecycler.adapter=adpater
+        binding.cardViewRefresh.apply {
+            setColorSchemeResources(R.color.grey_4F4F4F)
+            setOnRefreshListener {
+                refreshFruits(adpater)
+            }
+        }
 
+
+    }
+    fun refreshFruits(adapter: CardviewFruitAdapter){
+        thread {
+            Thread.sleep(1000)
+            runOnUiThread{
+                initFruits()
+                adapter.notifyDataSetChanged()
+                binding.cardViewRefresh.isRefreshing=false
+            }
+        }
     }
     private fun initFruits(){
 

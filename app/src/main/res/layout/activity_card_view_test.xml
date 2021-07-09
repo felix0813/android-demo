@@ -7,10 +7,16 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".CardViewTest">
+
 <include layout="@layout/sub_toolbar"/>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="match_parent"
+        android:id="@+id/cardViewRefresh">
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/cardViewRecycler"/>
-
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </LinearLayout>
