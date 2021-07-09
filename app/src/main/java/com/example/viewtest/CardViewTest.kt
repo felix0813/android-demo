@@ -15,6 +15,7 @@ class CardViewTest : BaseActivity() {
         super.onCreate(savedInstanceState)
         binding=ActivityCardViewTestBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         load_toolbar()
         initFruits()
         val layoutManager=GridLayoutManager(this,2)

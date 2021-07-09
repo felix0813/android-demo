@@ -80,6 +80,7 @@ class MidActivity : BaseActivity() {
         binding.gridLayoutButton.start<grid_test>(this)
         binding.fragmentTest.start<Fragment_test>(this)
         binding.cardViewTest.start<CardViewTest>(this)
+        //binding.foldableToolbarTest.start<FoldableToolbarTest>(this)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

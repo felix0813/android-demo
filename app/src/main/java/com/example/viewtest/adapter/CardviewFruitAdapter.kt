@@ -1,6 +1,7 @@
 package com.example.viewtest.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.viewtest.FoldableToolbarTest
 import com.example.viewtest.R
 import com.example.viewtest.newclass.Fruit
 
@@ -29,6 +31,13 @@ class CardviewFruitAdapter(val context: Context, val fruit_list:ArrayList<Fruit>
         val fruit=fruit_list[position]
         Glide.with(context).load(fruit.imageId).into(holder.fruit_img)
         holder.fruit_name.setText(fruit.name)
+        holder.itemView.setOnClickListener {
+            val intent= Intent(context,FoldableToolbarTest::class.java).apply {
+                putExtra(FoldableToolbarTest.fruitName,fruit.name)
+                putExtra(FoldableToolbarTest.fruitId,fruit.imageId)
+            }
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount()=fruit_list.size

@@ -20,7 +20,10 @@
         android:theme="@style/Theme.ViewTest"
         tools:ignore="AllowBackup"
         tools:targetApi="n">
-        <activity android:name=".CardViewTest"></activity>
+        <activity android:name=".FoldableToolbarTest"
+            android:theme="@style/FoldableTestTheme">
+        </activity>
+        <activity android:name=".CardViewTest" />
         <activity
             android:name=".ChangePasswordDialog"
             android:theme="@style/Theme.AppCompat.Dialog" />

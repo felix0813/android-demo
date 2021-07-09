@@ -18,4 +18,11 @@ object Utils {
             Toast.makeText(activity,"You click the button in ${activity.javaClass.simpleName}!",Toast.LENGTH_SHORT).show()
         }
     }
+    fun repeatString(n:Int,string: String):String{
+        val result=StringBuilder()
+        repeat(n){
+            result.append(string)
+        }
+        return result.toString()
+    }
 }
