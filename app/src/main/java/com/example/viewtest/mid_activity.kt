@@ -81,7 +81,7 @@ class mid_activity : BaseActivity() {
         }
         val list_view=findViewById<Button>(R.id.list_view_test)
         list_view.setOnClickListener {
-            val intent=Intent(this,list_view_test::class.java)
+            val intent=Intent(this,ListViewTest::class.java)
             startActivity(intent)
         }
         val recyclerview=findViewById<Button>(R.id.recyclerview_test)

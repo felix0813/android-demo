@@ -110,16 +110,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="fragment测试" />
-    <Button
-        android:layout_marginTop="670dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="fragment测试" />
-    <Button
-        android:layout_marginTop="715dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="fragment测试" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

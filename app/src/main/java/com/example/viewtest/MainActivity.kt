@@ -43,7 +43,7 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         bindService(Intent(this, AllService::class.java),connection, Context.BIND_AUTO_CREATE)
         val binding=ActivityMainBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
         load_toolbar()
         val read_user=getSharedPreferences("login",Context.MODE_PRIVATE)
         val take_drawer_out=findViewById<ImageButton>(R.id.main_drawer_button)
@@ -71,17 +71,13 @@ class MainActivity : BaseActivity() {
 
         }
         binding.chatTest.start<ChatTest>(this)
-        binding.newsTestButton.start<news_test>(this)
+        binding.newsTestButton.start<NewsTest>(this)
         binding.broadcastTestButton.start<BroadcastTest>(this)
         binding.persistenceTestButton.start<persistence_test>(this)
         binding.readContactsButton.start<read_contacts>(this)
         binding.cameraTestButton.start<CameraTest>(this)
         binding.multimediaButton.start<multimedia_test>(this)
-        val web_relative_test_button=findViewById<Button>(R.id.webtool_test_button)
-        web_relative_test_button.setOnClickListener {
-            startActivity(Intent(this,webtool_test::class.java))
-        }
-
+        binding.webtoolTestButton.start<webtool_test>(this)
         val navView=findViewById<NavigationView>(R.id.navView)
         val header=navView.getHeaderView(0)
         header.findViewById<TextView>(R.id.user_text).setText(read_user.getString("current_user","null"))

@@ -6,7 +6,7 @@ import android.widget.Toast
 import com.example.viewtest.adapter.FruitAdapter
 import com.example.viewtest.newclass.Fruit
 
-class list_view_test : BaseActivity() {
+class ListViewTest : BaseActivity() {
     private val fruit_list= ArrayList<Fruit>()
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -79,13 +79,13 @@
 
         <activity android:name=".BroadcastTest" />
         <activity android:name=".news_content" />
-        <activity android:name=".news_test" />
+        <activity android:name=".NewsTest" />
         <activity android:name=".Fragment_test" />
         <activity android:name=".ChatTest" />
         <activity android:name=".grid_test" />
         <activity android:name=".staggeredGrid_test" />
         <activity android:name=".recyclerview_test" />
-        <activity android:name=".list_view_test" />
+        <activity android:name=".ListViewTest" />
         <activity android:name=".http_test">
             <intent-filter tools:ignore="AppLinkUrlError">
                 <action android:name="android.intent.action.VIEW" />
