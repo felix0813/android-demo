@@ -14,7 +14,8 @@
         android:gravity="center"
         android:text="back"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/title"
@@ -22,6 +23,7 @@
         android:layout_height="wrap_content"
         android:textColor="#FFFFFF"
         android:layout_gravity="center_horizontal"
-        android:text="felix's test" />
+        android:text="felix's test"
+        tools:ignore="HardcodedText" />
 
 </androidx.appcompat.widget.Toolbar>
