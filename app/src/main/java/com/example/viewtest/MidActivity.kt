@@ -12,14 +12,14 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.example.viewtest.databinding.MidLayoutBinding
+import com.example.viewtest.databinding.ActivityMidBinding
 import com.example.viewtest.newclass.Utils.start
 
 class MidActivity : BaseActivity() {
-    lateinit var binding:MidLayoutBinding
+    lateinit var binding:ActivityMidBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= MidLayoutBinding.inflate(layoutInflater)
+        binding= ActivityMidBinding.inflate(layoutInflater)
         setContentView(binding.root)
         load_toolbar()
         binding.midFloat.floatingButton.bringToFront()
