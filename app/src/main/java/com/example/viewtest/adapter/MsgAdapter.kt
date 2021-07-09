@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.viewtest.newclass.Msg
 import com.example.viewtest.R
 
-class msgAdapter(val msgList:ArrayList<Msg>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class MsgAdapter(val msgList:ArrayList<Msg>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     inner class leftViewHolder(view: View):RecyclerView.ViewHolder(view){
         val leftMsg:TextView=view.findViewById(R.id.leftMsg)
     }

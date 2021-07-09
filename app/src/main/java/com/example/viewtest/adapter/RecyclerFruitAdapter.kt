@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.viewtest.newclass.Fruit
 import com.example.viewtest.R
 
-class recyclerFruitAdapter(val fruit_list:ArrayList<Fruit>) :
-    RecyclerView.Adapter<recyclerFruitAdapter.ViewHolder>(){
+class RecyclerFruitAdapter(val fruit_list:ArrayList<Fruit>) :
+    RecyclerView.Adapter<RecyclerFruitAdapter.ViewHolder>(){
     inner class ViewHolder(view: View):RecyclerView.ViewHolder(view){
         val fruit_img=view.findViewById<ImageView>(R.id.recycler_fruit_img)
         val fruit_name=view.findViewById<TextView>(R.id.recycler_fruit_name)

@@ -116,6 +116,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="fragment测试" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="670dp"
+        android:text="cardview测试"
+        android:id="@+id/card_view_test"/>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

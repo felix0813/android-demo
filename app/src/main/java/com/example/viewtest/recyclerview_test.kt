@@ -3,7 +3,7 @@ package com.example.viewtest
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.viewtest.adapter.recyclerFruitAdapter
+import com.example.viewtest.adapter.RecyclerFruitAdapter
 import com.example.viewtest.newclass.Fruit
 
 
@@ -19,7 +19,7 @@ class recyclerview_test : BaseActivity() {
         layoutManager.orientation=LinearLayoutManager.HORIZONTAL
         val recycler_view=findViewById<RecyclerView>(R.id.recyclerview)
         recycler_view.layoutManager=layoutManager
-        val adapter= recyclerFruitAdapter(fruit_list)
+        val adapter= RecyclerFruitAdapter(fruit_list)
         recycler_view.adapter=adapter
 
     }

@@ -6,7 +6,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.viewtest.adapter.msgAdapter
+import com.example.viewtest.adapter.MsgAdapter
 import com.example.viewtest.newclass.Msg
 
 class ChatTest : BaseActivity() {
@@ -20,7 +20,7 @@ class ChatTest : BaseActivity() {
         val msg_layout=findViewById<RecyclerView>(R.id.msg_layout)
 
         msg_layout.layoutManager=layoutManager
-        val adapter= msgAdapter(msg_list)
+        val adapter= MsgAdapter(msg_list)
         msg_layout.adapter=adapter
         val send_button=findViewById<Button>(R.id.send_button)
         send_button.setOnClickListener {

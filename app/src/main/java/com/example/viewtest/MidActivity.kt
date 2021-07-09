@@ -13,8 +13,9 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.viewtest.databinding.MidLayoutBinding
+import com.example.viewtest.newclass.Utils.start
 
-class mid_activity : BaseActivity() {
+class MidActivity : BaseActivity() {
     lateinit var binding:MidLayoutBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,10 +26,7 @@ class mid_activity : BaseActivity() {
         binding.midFloat.floatingButton.setOnClickListener {
             Toast.makeText(this,"clicked",Toast.LENGTH_SHORT).show()
         }
-        val button4: Button =findViewById(R.id.dial)
-
-        button4.setOnClickListener{
-
+        binding.dial.setOnClickListener{
             val tel=findViewById<TextView>(R.id.tel).text.toString()
             if(tel.length!=5&&tel.length!=8&&tel.length!=11){
                 val intent2 =Intent(this,tel_num_warn::class.java)
@@ -46,9 +44,8 @@ class mid_activity : BaseActivity() {
             }
             Log.d("info","jump to phone call")
         }
-        val button2: Button =findViewById(R.id.httpstest)
-        button2.setOnClickListener{//将网址传给第三个activity
 
+        binding.httpstest.setOnClickListener{//将网址传给第三个activity
             val intent = Intent(Intent.ACTION_VIEW)
             val https: EditText =findViewById(R.id.httpstext)
             val website= https.text.toString()
@@ -58,9 +55,7 @@ class mid_activity : BaseActivity() {
             startActivity(Intent.createChooser(intent,"choose the open method"))
             Log.d("info","click")
         }
-        val button6: Button =findViewById(R.id.httptest)
-        button6.setOnClickListener{//将网址传给第三个activity
-
+        binding.httptest.setOnClickListener{//将网址传给第三个activity
             val intent = Intent(Intent.ACTION_VIEW)
             val http: EditText = findViewById(R.id.httptext)
             val website=http.text.toString()
@@ -69,47 +64,22 @@ class mid_activity : BaseActivity() {
             startActivity(Intent.createChooser(intent,"choose the open method"))
             Log.d("info","click")
         }
-        val layout_test=findViewById<Button>(R.id.layout_test)
-        layout_test.setOnClickListener {
-            val intent=Intent(this,relativelayout_test::class.java)
-            startActivity(intent)
-        }
-        val img_test: Button =findViewById(R.id.img_test)
-        img_test.setOnClickListener {
-            val intent=Intent(this,image_test::class.java)
-            startActivity(intent)
-        }
+
+        binding.layoutTest.start<relativelayout_test>(this)
+        binding.imgTest.start<image_test>(this)
         val button7: Button =findViewById(R.id.returntest)
         button7.setOnClickListener{
             val intent=Intent(this,CallbackActivity::class.java)
 
             startActivityForResult(intent,1)
         }
-        val list_view=findViewById<Button>(R.id.list_view_test)
-        list_view.setOnClickListener {
-            val intent=Intent(this,ListViewTest::class.java)
-            startActivity(intent)
-        }
-        val recyclerview=findViewById<Button>(R.id.recyclerview_test)
-        recyclerview.setOnClickListener {
-            val intent=Intent(this,recyclerview_test::class.java)
-            startActivity(intent)
-        }
-        val staggeredGrid=findViewById<Button>(R.id.staggeredGrid)
-        staggeredGrid.setOnClickListener{
-            val intent=Intent(this,staggeredGrid_test::class.java)
-            startActivity(intent)
-        }
-        val grid_layout=findViewById<Button>(R.id.grid_layout_button)
-        grid_layout.setOnClickListener{
-            val intent=Intent(this,grid_test::class.java)
-            startActivity(intent)
-        }
-        val frag_test=findViewById<Button>(R.id.fragment_test)
-        frag_test.setOnClickListener {
-            val intent=Intent(this,Fragment_test::class.java)
-            startActivity(intent)
-        }
+
+        binding.listViewTest.start<ListViewTest>(this)
+        binding.recyclerviewTest.start<recyclerview_test>(this)
+        binding.staggeredGrid.start<staggeredGrid_test>(this)
+        binding.gridLayoutButton.start<grid_test>(this)
+        binding.fragmentTest.start<Fragment_test>(this)
+        binding.cardViewTest.start<CardViewTest>(this)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
