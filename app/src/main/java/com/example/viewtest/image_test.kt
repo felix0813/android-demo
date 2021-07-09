@@ -26,7 +26,7 @@ class image_test : BaseActivity() {
                 AlertDialog.Builder(this).apply {
                     setTitle("提示")
                     setMessage("只有三张图片")
-                    setPositiveButton("继续"){dialog,which->}
+                    setPositiveButton("继续"){ _, _ ->}
                     show()
                 }
 

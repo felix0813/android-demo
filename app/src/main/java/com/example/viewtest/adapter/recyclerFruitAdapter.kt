@@ -40,20 +40,20 @@ class recyclerFruitAdapter(val fruit_list:ArrayList<Fruit>) :
             val position4=holder.layoutPosition
             Log.e("felix","4position${position4}")*/
 
-            val fruit=fruit_list[position]
-            Toast.makeText(holder.itemView.context,"You click view ${fruit.name}",Toast.LENGTH_SHORT).show()
+            val fruit1=fruit_list[position]
+            Toast.makeText(holder.itemView.context,"You click view ${fruit1.name}",Toast.LENGTH_SHORT).show()
         }
         holder.fruit_img.setOnClickListener{
             Log.e("felix","imgclick")
             //val position=holder.adapterPosition
-            val fruit=fruit_list[position]
-            Toast.makeText(holder.fruit_img.context,"You click image ${fruit.name}",Toast.LENGTH_SHORT).show()
+            val fruit1=fruit_list[position]
+            Toast.makeText(holder.fruit_img.context,"You click image ${fruit1.name}",Toast.LENGTH_SHORT).show()
         }
         holder.fruit_name.setOnClickListener{
             Log.e("felix","textclick")
             //val position=holder.adapterPosition
-            val fruit=fruit_list[position]
-            Toast.makeText(holder.fruit_name.context,"You click text ${fruit.name}",Toast.LENGTH_SHORT).show()
+            val fruit1=fruit_list[position]
+            Toast.makeText(holder.fruit_name.context,"You click text ${fruit1.name}",Toast.LENGTH_SHORT).show()
         }
     }
 

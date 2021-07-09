@@ -1,20 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+
+<com.google.android.material.floatingactionbutton.FloatingActionButton
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
 
+    android:id="@+id/floatingButton"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-
-        android:id="@+id/floatingButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:contentDescription="unused"
-        app:elevation="8dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:src="@drawable/ic_done"
-        android:layout_alignParentRight="true" />
-</RelativeLayout>
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|end"
+    android:contentDescription="unused"
+    app:elevation="8dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:src="@drawable/ic_done"
+    android:layout_alignParentRight="true" />

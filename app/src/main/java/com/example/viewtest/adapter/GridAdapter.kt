@@ -49,20 +49,20 @@ class GridAdapter(val fruit_list:ArrayList<Fruit>) :
             val position4=holder.layoutPosition
             Log.e("felix","4position${position4}")*/
 
-            val fruit=fruit_list[position]
-            Toast.makeText(holder.itemView.context,"You click view ${fruit.name}", Toast.LENGTH_SHORT).show()
+            val _fruit=fruit_list[position]
+            Toast.makeText(holder.itemView.context,"You click view ${_fruit.name}", Toast.LENGTH_SHORT).show()
         }
         holder.fruit_img.setOnClickListener{
             Log.e("felix","imgclick")
             //val position=holder.adapterPosition
-            val fruit=fruit_list[position]
-            Toast.makeText(holder.fruit_img.context,"You click image ${fruit.name}", Toast.LENGTH_SHORT).show()
+            val _fruit=fruit_list[position]
+            Toast.makeText(holder.fruit_img.context,"You click image ${_fruit.name}", Toast.LENGTH_SHORT).show()
         }
         holder.fruit_name.setOnClickListener{
             Log.e("felix","textclick")
             //val position=holder.adapterPosition
-            val fruit=fruit_list[position]
-            Toast.makeText(holder.fruit_name.context,"You click text ${fruit.name}", Toast.LENGTH_SHORT).show()
+            val _fruit=fruit_list[position]
+            Toast.makeText(holder.fruit_name.context,"You click text ${_fruit.name}", Toast.LENGTH_SHORT).show()
         }
     }
 }

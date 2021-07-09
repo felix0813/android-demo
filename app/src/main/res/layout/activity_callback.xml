@@ -14,9 +14,5 @@
     <include
         android:id="@+id/callback_float"
         layout="@layout/floating_button"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="15dp"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
          />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

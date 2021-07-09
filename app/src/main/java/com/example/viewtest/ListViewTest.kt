@@ -17,7 +17,7 @@ class ListViewTest : BaseActivity() {
         val adapter= FruitAdapter(this,R.layout.fruit_item,fruit_list)
         val list_view=findViewById<ListView>(R.id.list_view)
         list_view.adapter=adapter
-        list_view.setOnItemClickListener { parent, view, position, id ->
+        list_view.setOnItemClickListener { _, _, position, _ ->
             val fruit=fruit_list[position]
             Toast.makeText(this,fruit.name,Toast.LENGTH_SHORT).show()
         }

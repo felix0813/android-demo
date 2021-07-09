@@ -2,10 +2,9 @@ package com.example.viewtest
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.Toast
 import com.example.viewtest.databinding.ActivityCallbackBinding
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+
 
 
 import com.google.android.material.snackbar.Snackbar
@@ -27,8 +26,8 @@ class CallbackActivity : BaseActivity() {
             setResult(RESULT_OK,intent)
             finish()
         }
-        binding.callbackFloat.floatingButton.setOnClickListener {
-            Snackbar.make(binding.callbackFloat.floatingButton,"clicked",Snackbar.LENGTH_SHORT).setAction("Undo"){
+        binding.callbackFloat.floatingButton.setOnClickListener { view->
+            Snackbar.make(view,"clicked",Snackbar.LENGTH_SHORT).setAction("Undo"){
                 Toast.makeText(this,"click snackbar",Toast.LENGTH_SHORT).show()
             }.show()
         }

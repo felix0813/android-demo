@@ -12,15 +12,21 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.viewtest.databinding.MidLayoutBinding
 
 class mid_activity : BaseActivity() {
-
+    lateinit var binding:MidLayoutBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.mid_layout)
+        binding= MidLayoutBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         load_toolbar()
-
+        binding.midFloat.floatingButton.bringToFront()
+        binding.midFloat.floatingButton.setOnClickListener {
+            Toast.makeText(this,"clicked",Toast.LENGTH_SHORT).show()
+        }
         val button4: Button =findViewById(R.id.dial)
+
         button4.setOnClickListener{
 
             val tel=findViewById<TextView>(R.id.tel).text.toString()
