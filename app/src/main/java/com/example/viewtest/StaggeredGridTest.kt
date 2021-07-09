@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.viewtest.adapter.GridAdapter
 import com.example.viewtest.newclass.Fruit
 
-class staggeredGrid_test : BaseActivity() {
+class StaggeredGridTest : BaseActivity() {
     val fruit_list=ArrayList<Fruit>()
 
     override fun onCreate(savedInstanceState: Bundle?) {

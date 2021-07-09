@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
 
-    tools:context=".staggeredGrid_test">
+    tools:context=".StaggeredGridTest">
     <include layout="@layout/sub_toolbar"/>
 
     <androidx.recyclerview.widget.RecyclerView

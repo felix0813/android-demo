@@ -5,7 +5,7 @@ import android.os.Bundle
 
 import com.example.viewtest.newclass.NewsRightFrag
 
-class news_content : BaseActivity() {
+class NewsContent : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

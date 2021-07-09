@@ -1,16 +1,15 @@
 package com.example.viewtest
 
-import android.content.ContentValues
 import android.content.Context
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import com.example.viewtest.newclass.sqlhelper
+import com.example.viewtest.newclass.SqlHelper
 import java.io.*
 
-class persistence_test : BaseActivity() {
+class PersistenceTest : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,7 +57,6 @@ class persistence_test : BaseActivity() {
         val sharedPreference=findViewById<Button>(R.id.sharedpreference)
         sharedPreference.setOnClickListener {
             val editor=getSharedPreferences("users",Context.MODE_PRIVATE).edit()
-            editor.putString("felix","220813")
             val reader=getSharedPreferences("users",Context.MODE_PRIVATE)
             val pair=get_edittext()
             if(reader.contains(pair.first)&&pair.first.equals("")){
@@ -77,7 +75,7 @@ class persistence_test : BaseActivity() {
 
 
         }
-        val dbhelper= sqlhelper(this,"db",2).writableDatabase
+        val dbhelper= SqlHelper(this,"db",2).writableDatabase
         val dbstore=findViewById<Button>(R.id.store_in_database)
         dbstore.setOnClickListener {
 
@@ -85,12 +83,14 @@ class persistence_test : BaseActivity() {
             val name=findViewById<EditText>(R.id.value1).text.toString()
             val num=findViewById<EditText>(R.id.value2).text.toString()
             if(!name.equals("")&&!num.equals("")) {
-                val data = ContentValues().apply {
+                /*val data = ContentValues().apply {
                     put("name", name)
                     put("phone", num)
                     put("id", num.substring(num.length - 4).toInt())
                 }
-                dbhelper.insert(tablename, null, data)
+                dbhelper.insert(tablename, null, data)*/
+                val sql="insert into contacts (id,name,phone) values (${num.substring(num.length - 4).toInt()},'$name','$num');"
+                dbhelper.execSQL(sql)
             }
 
         }

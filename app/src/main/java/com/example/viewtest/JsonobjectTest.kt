@@ -10,7 +10,7 @@ import org.json.JSONArray
 import java.io.IOException
 
 
-class jsonobject_test : BaseActivity() {
+class JsonobjectTest : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_jsonobject_test)

@@ -7,7 +7,7 @@ import com.example.viewtest.adapter.RecyclerFruitAdapter
 import com.example.viewtest.newclass.Fruit
 
 
-class recyclerview_test : BaseActivity() {
+class RecyclerviewTest : BaseActivity() {
     private var fruit_list= ArrayList<Fruit>()
 
     override fun onCreate(savedInstanceState: Bundle?) {

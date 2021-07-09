@@ -12,7 +12,7 @@ import okhttp3.*
 import java.io.IOException
 
 
-class gson_test : BaseActivity() {
+class GsonTest : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gson_test)

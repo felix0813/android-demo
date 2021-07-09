@@ -27,15 +27,15 @@
         <activity
             android:name=".ChangePasswordDialog"
             android:theme="@style/Theme.AppCompat.Dialog" />
-        <activity android:name=".retrofit_test" />
-        <activity android:name=".gson_test" />
-        <activity android:name=".jsonobject_test" />
-        <activity android:name=".xml_sax_test" />
-        <activity android:name=".xml_pull_test" />
-        <activity android:name=".okhttp_test" />
-        <activity android:name=".httpurlconnection_test" />
-        <activity android:name=".webtool_test" />
-        <activity android:name=".web_test" />
+        <activity android:name=".RetrofitTest" />
+        <activity android:name=".GsonTest" />
+        <activity android:name=".JsonobjectTest" />
+        <activity android:name=".XmlSaxTest" />
+        <activity android:name=".XmlPullTest" />
+        <activity android:name=".OkhttpTest" />
+        <activity android:name=".HttpurlConnectionTest" />
+        <activity android:name=".WebToolTest" />
+        <activity android:name=".WebViewTest" />
 
         <service
             android:name=".newclass.AllService"
@@ -43,7 +43,7 @@
             android:exported="true"
             tools:ignore="ExportedService" />
 
-        <activity android:name=".multimedia_test" />
+        <activity android:name=".MultimediaTest" />
         <activity android:name=".CameraTest" />
 
         <provider
@@ -62,9 +62,9 @@
             android:exported="true"
             tools:ignore="ExportedContentProvider" />
 
-        <activity android:name=".read_contacts" />
-        <activity android:name=".persistence_test" />
-        <activity android:name=".login">
+        <activity android:name=".ReadContacts" />
+        <activity android:name=".PersistenceTest" />
+        <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -82,15 +82,15 @@
         </receiver>
 
         <activity android:name=".BroadcastTest" />
-        <activity android:name=".news_content" />
+        <activity android:name=".NewsContent" />
         <activity android:name=".NewsTest" />
         <activity android:name=".Fragment_test" />
         <activity android:name=".ChatTest" />
-        <activity android:name=".grid_test" />
-        <activity android:name=".staggeredGrid_test" />
-        <activity android:name=".recyclerview_test" />
+        <activity android:name=".GridTest" />
+        <activity android:name=".StaggeredGridTest" />
+        <activity android:name=".RecyclerviewTest" />
         <activity android:name=".ListViewTest" />
-        <activity android:name=".http_test">
+        <activity android:name=".HttpTest">
             <intent-filter tools:ignore="AppLinkUrlError">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -99,7 +99,7 @@
                 <data android:scheme="http" />
             </intent-filter>
         </activity>
-        <activity android:name=".https_test">
+        <activity android:name=".HttpsTest">
             <intent-filter tools:ignore="AppLinkUrlError">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -116,11 +116,11 @@
                 <category android:name="com.example.activitytest.MY_CATEGORY" />
             </intent-filter>
         </activity>
-        <activity android:name=".image_test" />
+        <activity android:name=".ImageTest" />
         <activity android:name=".CallbackActivity" />
-        <activity android:name=".relativelayout_test" />
+        <activity android:name=".RelativelayoutTest" />
         <activity
-            android:name=".tel_num_warn"
+            android:name=".TelNumWarn"
             android:theme="@style/Theme.AppCompat.Dialog" />
         <activity android:name=".MainActivity">
             <intent-filter>

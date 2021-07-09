@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".relativelayout_test">
+    tools:context=".RelativelayoutTest">
     <include layout="@layout/sub_toolbar"/>
     <Button
         android:id="@+id/center"

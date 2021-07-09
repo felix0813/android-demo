@@ -7,7 +7,7 @@ import android.util.Log
 import android.widget.Button
 
 
-class https_test : BaseActivity() {
+class HttpsTest : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

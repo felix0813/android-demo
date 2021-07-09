@@ -11,7 +11,7 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 
 
-class read_contacts : BaseActivity() {
+class ReadContacts : BaseActivity() {
     private val contacts=ArrayList<String>()
     private lateinit var adpter:ArrayAdapter<String>
     override fun onCreate(savedInstanceState: Bundle?) {

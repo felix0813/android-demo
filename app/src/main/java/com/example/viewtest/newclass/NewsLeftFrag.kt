@@ -13,7 +13,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.viewtest.R
-import com.example.viewtest.news_content
+import com.example.viewtest.NewsContent
 
 
 class NewsLeftFrag:Fragment() {
@@ -46,7 +46,7 @@ class NewsLeftFrag:Fragment() {
                 }
                 else{
                     Log.e("felix","is one pane")
-                    val intent= Intent(context, news_content::class.java)
+                    val intent= Intent(context, NewsContent::class.java)
                     intent.putExtra("title",news.title)
                     intent.putExtra("content",news.content)
                     context.startActivity(intent)

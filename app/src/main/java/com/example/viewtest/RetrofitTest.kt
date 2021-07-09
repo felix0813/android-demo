@@ -11,7 +11,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
-class retrofit_test : BaseActivity() {
+class RetrofitTest : BaseActivity() {
     lateinit var binding:ActivityRetrofitTestBinding
 
 

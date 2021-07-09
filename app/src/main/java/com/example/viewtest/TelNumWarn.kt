@@ -8,7 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 
 
-class tel_num_warn : BaseActivity() {
+class TelNumWarn : BaseActivity() {
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -9,7 +9,7 @@ import com.example.viewtest.newclass.WebUtil
 import okhttp3.*
 import java.io.IOException
 
-class okhttp_test : BaseActivity() {
+class OkhttpTest : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_okhttp_test)

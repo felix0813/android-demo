@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.viewtest.adapter.GridAdapter
 import com.example.viewtest.newclass.Fruit
 
-class grid_test : BaseActivity() {
+class GridTest : BaseActivity() {
     private val fruit_list=ArrayList<Fruit>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

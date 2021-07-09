@@ -29,7 +29,7 @@ class MidActivity : BaseActivity() {
         binding.dial.setOnClickListener{
             val tel=findViewById<TextView>(R.id.tel).text.toString()
             if(tel.length!=5&&tel.length!=8&&tel.length!=11){
-                val intent2 =Intent(this,tel_num_warn::class.java)
+                val intent2 =Intent(this,TelNumWarn::class.java)
                 intent2.putExtra("tel",tel)
                 startActivity(intent2)
             }else{
@@ -65,8 +65,8 @@ class MidActivity : BaseActivity() {
             Log.d("info","click")
         }
 
-        binding.layoutTest.start<relativelayout_test>(this)
-        binding.imgTest.start<image_test>(this)
+        binding.layoutTest.start<RelativelayoutTest>(this)
+        binding.imgTest.start<ImageTest>(this)
         val button7: Button =findViewById(R.id.returntest)
         button7.setOnClickListener{
             val intent=Intent(this,CallbackActivity::class.java)
@@ -75,9 +75,9 @@ class MidActivity : BaseActivity() {
         }
 
         binding.listViewTest.start<ListViewTest>(this)
-        binding.recyclerviewTest.start<recyclerview_test>(this)
-        binding.staggeredGrid.start<staggeredGrid_test>(this)
-        binding.gridLayoutButton.start<grid_test>(this)
+        binding.recyclerviewTest.start<RecyclerviewTest>(this)
+        binding.staggeredGrid.start<StaggeredGridTest>(this)
+        binding.gridLayoutButton.start<GridTest>(this)
         binding.fragmentTest.start<Fragment_test>(this)
         binding.cardViewTest.start<CardViewTest>(this)
         //binding.foldableToolbarTest.start<FoldableToolbarTest>(this)

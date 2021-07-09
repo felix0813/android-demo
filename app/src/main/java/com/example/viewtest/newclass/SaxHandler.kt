@@ -5,7 +5,7 @@ import org.xml.sax.Attributes
 import org.xml.sax.helpers.DefaultHandler
 import java.lang.StringBuilder
 
-class saxHandler: DefaultHandler(){
+class SaxHandler: DefaultHandler(){
     var nodename =""
     lateinit var id: StringBuilder
     lateinit var name: StringBuilder

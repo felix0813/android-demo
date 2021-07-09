@@ -7,7 +7,7 @@ import android.util.Log
 import android.widget.Button
 
 
-class http_test : BaseActivity() {
+class HttpTest : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 

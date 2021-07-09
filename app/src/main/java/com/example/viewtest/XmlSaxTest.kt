@@ -5,14 +5,14 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import com.example.viewtest.newclass.WebUtil
-import com.example.viewtest.newclass.saxHandler
+import com.example.viewtest.newclass.SaxHandler
 import okhttp3.*
 import org.xml.sax.InputSource
 import java.io.IOException
 import java.io.StringReader
 import javax.xml.parsers.SAXParserFactory
 
-class xml_sax_test : BaseActivity() {
+class XmlSaxTest : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_xml_sax_test)
@@ -36,7 +36,7 @@ class xml_sax_test : BaseActivity() {
     }
     fun parseXMLWithSAX(xmlData:String){
         val reader=SAXParserFactory.newInstance().newSAXParser().xmlReader
-        val handler=saxHandler()
+        val handler=SaxHandler()
         reader.contentHandler=handler
         reader.parse(InputSource(StringReader(xmlData)))
     }

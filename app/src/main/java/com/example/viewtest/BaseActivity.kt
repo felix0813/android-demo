@@ -31,7 +31,7 @@ open class BaseActivity : AppCompatActivity() {
                 setCancelable(false)
                 setPositiveButton("OK"){_,_ ->
                     ActivityCollector.exit()
-                    startActivity(Intent(context,login::class.java))
+                    startActivity(Intent(context,Login::class.java))
                 }
                 show()
             }

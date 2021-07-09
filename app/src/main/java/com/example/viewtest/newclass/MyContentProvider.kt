@@ -3,11 +3,10 @@ package com.example.viewtest.newclass
 import android.content.ContentProvider
 import android.content.ContentValues
 import android.content.UriMatcher
-import android.database.Cursor
 import android.net.Uri
 
 class MyContentProvider : ContentProvider() {
-    var sqlHelper:sqlhelper?=null
+    var sqlHelper:SqlHelper?=null
     val contactsDir=0
     val contactsItem=1
 
@@ -54,7 +53,7 @@ class MyContentProvider : ContentProvider() {
         }
 
     override fun onCreate()=context?.let{
-        sqlHelper= context?.let { sqlhelper(it,"db",2) }
+        sqlHelper= context?.let { SqlHelper(it,"db",2) }
         true
     }?:false
 

@@ -19,7 +19,7 @@ open class ForegroundService:BaseService() {
         }
         val intent=Intent(ACTION_MAIN)
         intent.addCategory(Intent.CATEGORY_LAUNCHER)
-        intent.setClass(this,login::class.java)
+        intent.setClass(this,Login::class.java)
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED)
         val notification= NotificationCompat.Builder(this,"foregroundService").
         setSmallIcon(R.drawable.small_icon).setLargeIcon(BitmapFactory.decodeResource(resources,R.drawable.large_icon)).

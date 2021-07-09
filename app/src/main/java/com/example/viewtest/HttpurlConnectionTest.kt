@@ -12,7 +12,7 @@ import java.net.HttpURLConnection
 import java.net.URL
 import kotlin.concurrent.thread
 
-class httpurlconnection_test : BaseActivity() {
+class HttpurlConnectionTest : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_httpurlconnection_test)

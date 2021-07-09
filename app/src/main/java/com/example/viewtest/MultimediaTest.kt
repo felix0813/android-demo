@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.VideoView
 
-class multimedia_test : BaseActivity() {
+class MultimediaTest : BaseActivity() {
     val mediaPlayer=MediaPlayer()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
