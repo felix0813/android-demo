@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent">
-<LinearLayout
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent">
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <include layout="@layout/sub_toolbar"/>
     <Button
         android:id="@+id/httpstest"
+        android:layout_marginTop="55dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="https测试" />
 
     <EditText
+        android:layout_marginTop="100dp"
         android:id="@+id/httpstext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,6 +31,7 @@
 
     <Button
         android:id="@+id/httptest"
+        android:layout_marginTop="140dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="http测试" />
@@ -30,65 +39,98 @@
         android:id="@+id/httptext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="185dp"
         android:ems="10"
         android:maxLines="2"
         android:text="http://www." />
     <Button
+        android:layout_marginTop="225dp"
         android:id="@+id/dial"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="拨打电话" />
 
     <EditText
+        android:layout_marginTop="270dp"
         android:id="@+id/tel"
         android:layout_width="match_parent"
         android:inputType="phone"
         android:layout_height="wrap_content"
         android:hint="输入电话号码：例：10086" />
     <Button
+        android:layout_marginTop="310dp"
         android:id="@+id/returntest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="返回数据测试" />
     <Button
+        android:layout_marginTop="355dp"
         android:id="@+id/layout_test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="布局测试" />
     <Button
         android:id="@+id/img_test"
+        android:layout_marginTop="400dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="图片测试" />
 
     <Button
+        android:layout_marginTop="445dp"
         android:id="@+id/list_view_test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="listview测试" />
 
     <Button
+        android:layout_marginTop="490dp"
         android:id="@+id/recyclerview_test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="recyclerview测试" />
 
     <Button
+        android:layout_marginTop="535dp"
         android:id="@+id/staggeredGrid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="瀑布式view测试" />
 
     <Button
+        android:layout_marginTop="580dp"
         android:id="@+id/grid_layout_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="网格view测试" />
 
     <Button
+        android:layout_marginTop="625dp"
         android:id="@+id/fragment_test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="fragment测试" />
-</LinearLayout>
+    <Button
+        android:layout_marginTop="670dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="fragment测试" />
+    <Button
+        android:layout_marginTop="715dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="fragment测试" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
 </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+        <include layout="@layout/floating_button"/>
+    </LinearLayout>
+
+</RelativeLayout>

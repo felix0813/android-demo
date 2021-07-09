@@ -6,7 +6,7 @@ import android.os.Bundle
 import androidx.core.content.edit
 import com.example.viewtest.databinding.ActivityChangePasswordDialogBinding
 
-class change_password_dialog : BaseActivity() {
+class ChangePasswordDialog : BaseActivity() {
     lateinit var vbinding:ActivityChangePasswordDialogBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

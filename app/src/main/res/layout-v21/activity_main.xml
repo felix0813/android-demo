@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:text="@string/下一页面" />
     <Button
-        android:id="@+id/life_lauch"
+        android:id="@+id/life_launch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/其他测试" />

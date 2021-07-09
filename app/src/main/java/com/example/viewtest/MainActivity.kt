@@ -16,7 +16,9 @@ import android.widget.*
 import androidx.core.content.edit
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.viewtest.databinding.ActivityMainBinding
 import com.example.viewtest.newclass.AllService
+import com.example.viewtest.newclass.Utils.start
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : BaseActivity() {
@@ -39,31 +41,17 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-
-
-
         bindService(Intent(this, AllService::class.java),connection, Context.BIND_AUTO_CREATE)
+        val binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_main)
         load_toolbar()
         val read_user=getSharedPreferences("login",Context.MODE_PRIVATE)
-        //val drawertext=findViewById<TextView>(R.id.drawer_text)
-        //val newtext="当前用户：${read_user.getString("current_user","fail")}"
-        //drawertext.text=newtext
-
-        /*val change_password=findViewById<Button>(R.id.change_password)
-        change_password.setOnClickListener {
-            startActivity(Intent(this,change_password_dialog::class.java))
-        }*/
-
         val take_drawer_out=findViewById<ImageButton>(R.id.main_drawer_button)
         take_drawer_out.setOnClickListener {
             val drawerlayout=findViewById<DrawerLayout>(R.id.main_drawerlayout)
             drawerlayout.openDrawer(GravityCompat.START)
         }
-        val button1: Button =findViewById(R.id.next)
-
-
-        button1.setOnClickListener{//进入第二个activity
+        binding.next.setOnClickListener{//进入第二个activity
             //Toast.makeText(this,"Button1",Toast.LENGTH_LONG).show()
             val intent= Intent("com.example.activitytest.ACTION_START")
             intent.addCategory("com.example.activitytest.MY_CATEGORY")
@@ -73,8 +61,7 @@ class MainActivity : BaseActivity() {
 
 
 
-        val life_lauch=findViewById<Button>(R.id.life_lauch)
-        life_lauch.setOnClickListener {
+       binding.lifeLaunch.setOnClickListener {
             val intent=packageManager.getLaunchIntentForPackage("com.example.lifecycle")
             if (intent != null) {
                 intent.putExtra("type","110")
@@ -83,34 +70,13 @@ class MainActivity : BaseActivity() {
             }
 
         }
-        val chat_test_button=findViewById<Button>(R.id.chat_test)
-        chat_test_button.setOnClickListener {
-            startActivity(Intent(this,chat_test::class.java))
-        }
-        val news_test_button=findViewById<Button>(R.id.news_test_button)
-        news_test_button.setOnClickListener {
-            startActivity(Intent(this,news_test::class.java))
-        }
-        val broadcast_test_button=findViewById<Button>(R.id.broadcast_test_button)
-        broadcast_test_button.setOnClickListener {
-            startActivity(Intent(this,broadcast_test::class.java))
-        }
-        val persistence_test_button=findViewById<Button>(R.id.persistence_test_button)
-        persistence_test_button.setOnClickListener {
-            startActivity(Intent(this,persistence_test::class.java))
-        }
-        val read_contacts_button=findViewById<Button>(R.id.read_contacts_button)
-        read_contacts_button.setOnClickListener {
-            startActivity(Intent(this,read_contacts::class.java))
-        }
-        val camera_test=findViewById<Button>(R.id.camera_test_button)
-        camera_test.setOnClickListener {
-            startActivity(Intent(this,com.example.viewtest.camera_test::class.java))
-        }
-        val multimedia_button=findViewById<Button>(R.id.multimedia_button)
-            multimedia_button.setOnClickListener{
-                startActivity(Intent(this,multimedia_test::class.java))
-        }
+        binding.chatTest.start<ChatTest>(this)
+        binding.newsTestButton.start<news_test>(this)
+        binding.broadcastTestButton.start<BroadcastTest>(this)
+        binding.persistenceTestButton.start<persistence_test>(this)
+        binding.readContactsButton.start<read_contacts>(this)
+        binding.cameraTestButton.start<CameraTest>(this)
+        binding.multimediaButton.start<multimedia_test>(this)
         val web_relative_test_button=findViewById<Button>(R.id.webtool_test_button)
         web_relative_test_button.setOnClickListener {
             startActivity(Intent(this,webtool_test::class.java))
@@ -134,7 +100,7 @@ class MainActivity : BaseActivity() {
                     true
                 }
                 R.id.change_password_item->{
-                    startActivity(Intent(this,change_password_dialog::class.java))
+                    startActivity(Intent(this,ChangePasswordDialog::class.java))
                     true
                 }
                 else-> true

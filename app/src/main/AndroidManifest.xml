@@ -18,8 +18,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ViewTest"
-        tools:ignore="AllowBackup">
-        <activity android:name=".change_password_dialog" android:theme="@style/Theme.AppCompat.Dialog"/>
+        tools:ignore="AllowBackup"
+        tools:targetApi="n">
+        <activity android:name=".ChangePasswordDialog" android:theme="@style/Theme.AppCompat.Dialog"/>
 
 
         <activity android:name=".retrofit_test" />
@@ -39,7 +40,7 @@
             tools:ignore="ExportedService" />
 
         <activity android:name=".multimedia_test" />
-        <activity android:name=".camera_test" />
+        <activity android:name=".CameraTest" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -76,11 +77,11 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".broadcast_test" />
+        <activity android:name=".BroadcastTest" />
         <activity android:name=".news_content" />
         <activity android:name=".news_test" />
         <activity android:name=".Fragment_test" />
-        <activity android:name=".chat_test" />
+        <activity android:name=".ChatTest" />
         <activity android:name=".grid_test" />
         <activity android:name=".staggeredGrid_test" />
         <activity android:name=".recyclerview_test" />

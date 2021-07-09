@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".broadcast_test">
+    tools:context=".BroadcastTest">
 <include layout="@layout/sub_toolbar"/>
 
     <Button

@@ -8,7 +8,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 
-class broadcast_test : BaseActivity() {
+class BroadcastTest : BaseActivity() {
     private lateinit var Receiver1:myBroadcastReceiver
     private lateinit var Receiver2:myBroadcastReceiver2
     override fun onCreate(savedInstanceState: Bundle?) {

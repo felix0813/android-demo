@@ -5,80 +5,84 @@
     android:layout_height="match_parent"
     android:id="@+id/main_drawerlayout"
     android:layout_width="match_parent">
-
-<LinearLayout
-
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
-    <include layout="@layout/main_toolbar"/>
-
-    <Button
-        android:id="@+id/next"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="下一页面" />
-
-
-
-    <Button
-        android:id="@+id/life_lauch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="lifecyle/lauchmode测试" />
-
-    <Button
-        android:id="@+id/chat_test"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="聊天测试" />
-
-    <Button
-        android:id="@+id/news_test_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="新闻测试" />
-
-    <Button
-        android:id="@+id/broadcast_test_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="广播测试" />
-
-    <Button
-        android:id="@+id/persistence_test_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="持久化测试" />
-
-    <ImageView
-        android:id="@+id/more_fucntions"
-        android:layout_width="219dp"
-        android:layout_height="141dp"
-        android:layout_gravity="center"
-        android:src="@drawable/more_functions" />
-
-</LinearLayout>
-
-    <LinearLayout
-        android:layout_width="200dp"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        android:layout_gravity="start"
-        android:orientation="vertical">
-        <TextView
-            android:textSize="30sp"
-            android:id="@+id/drawer_text"
-            android:layout_width="200dp"
-            android:text="更多功能将在以后添加"
-            android:layout_height="wrap_content"/>
-        <Button
+        android:layout_height="match_parent">
+        <LinearLayout xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
-            android:textSize="25sp"
-            android:text="修改密码"
             android:layout_height="wrap_content"
-            android:id="@+id/change_password"/>
-    </LinearLayout>
+            tools:context=".MainActivity"
+            android:orientation="vertical">
+
+            <include layout="@layout/main_toolbar"/>
+            <Button
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/下一页面" />
+            <Button
+                android:id="@+id/life_launch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/其他测试" />
+            <Button
+                android:id="@+id/chat_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/聊天测试" />
+            <Button
+                android:id="@+id/news_test_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/新闻测试" />
+            <Button
+                android:id="@+id/broadcast_test_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/广播测试" />
+            <Button
+                android:id="@+id/persistence_test_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/持久化测试" />
+
+            <Button
+                android:id="@+id/read_contacts_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/读取联系人" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/camera_test_button"
+                android:text="@string/照相机and相册测试"/>
+
+            <Button
+                android:id="@+id/multimedia_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/多媒体播放" />
+
+            <Button
+                android:id="@+id/webtool_test_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/网络相关测试" />
+
+            <ImageView
+                android:id="@+id/more_fucntions"
+                android:layout_width="219dp"
+                android:layout_height="141dp"
+                android:layout_gravity="center"
+                android:src="@drawable/more_functions"
+                android:contentDescription="@string/more_functions_to_be_implemented" />
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="300dp"
+        android:id="@+id/navView"
+        android:layout_gravity="start"
+        app:menu="@menu/nav_menu"
+        app:headerLayout="@layout/nav_header"
+        android:layout_height="match_parent"/>
 </androidx.drawerlayout.widget.DrawerLayout>

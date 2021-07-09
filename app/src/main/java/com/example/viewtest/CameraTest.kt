@@ -13,7 +13,7 @@ import androidx.annotation.RequiresApi
 import androidx.core.content.FileProvider
 import java.io.File
 
-class camera_test : BaseActivity() {
+class CameraTest : BaseActivity() {
     lateinit var output:File
     lateinit var uri: Uri
     @RequiresApi(Build.VERSION_CODES.KITKAT)

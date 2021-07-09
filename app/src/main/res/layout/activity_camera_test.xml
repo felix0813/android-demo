@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".camera_test">
+    tools:context=".CameraTest">
 <include layout="@layout/sub_toolbar"/>
 
     <Button
