@@ -62,6 +62,7 @@ class MainActivity : BaseActivity() {
 
 
        binding.lifeLaunch.setOnClickListener {
+
             val intent=packageManager.getLaunchIntentForPackage("com.example.lifecycle")
             if (intent != null) {
                 intent.putExtra("type","110")
@@ -70,14 +71,14 @@ class MainActivity : BaseActivity() {
             }
 
         }
-        binding.chatTest.start<ChatTest>(this)
-        binding.newsTestButton.start<NewsTest>(this)
-        binding.broadcastTestButton.start<BroadcastTest>(this)
-        binding.persistenceTestButton.start<PersistenceTest>(this)
-        binding.readContactsButton.start<ReadContacts>(this)
-        binding.cameraTestButton.start<CameraTest>(this)
-        binding.multimediaButton.start<MultimediaTest>(this)
-        binding.webtoolTestButton.start<WebToolTest>(this)
+        binding.chatTest.start<ChatTest>()
+        binding.newsTestButton.start<NewsTest>()
+        binding.broadcastTestButton.start<BroadcastTest>()
+        binding.persistenceTestButton.start<PersistenceTest>()
+        binding.readContactsButton.start<ReadContacts>()
+        binding.cameraTestButton.start<CameraTest>()
+        binding.multimediaButton.start<MultimediaTest>()
+        binding.webtoolTestButton.start<WebToolTest>()
         val navView=findViewById<NavigationView>(R.id.navView)
         val header=navView.getHeaderView(0)
         header.findViewById<TextView>(R.id.user_text).setText(read_user.getString("current_user","null"))

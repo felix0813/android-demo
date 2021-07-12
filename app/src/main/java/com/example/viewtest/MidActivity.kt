@@ -65,8 +65,8 @@ class MidActivity : BaseActivity() {
             Log.d("info","click")
         }
 
-        binding.layoutTest.start<RelativelayoutTest>(this)
-        binding.imgTest.start<ImageTest>(this)
+        binding.layoutTest.start<RelativelayoutTest>()
+        binding.imgTest.start<ImageTest>()
         val button7: Button =findViewById(R.id.returntest)
         button7.setOnClickListener{
             val intent=Intent(this,CallbackActivity::class.java)
@@ -74,12 +74,12 @@ class MidActivity : BaseActivity() {
             startActivityForResult(intent,1)
         }
 
-        binding.listViewTest.start<ListViewTest>(this)
-        binding.recyclerviewTest.start<RecyclerviewTest>(this)
-        binding.staggeredGrid.start<StaggeredGridTest>(this)
-        binding.gridLayoutButton.start<GridTest>(this)
-        binding.fragmentTest.start<Fragment_test>(this)
-        binding.cardViewTest.start<CardViewTest>(this)
+        binding.listViewTest.start<ListViewTest>()
+        binding.recyclerviewTest.start<RecyclerviewTest>()
+        binding.staggeredGrid.start<StaggeredGridTest>()
+        binding.gridLayoutButton.start<GridTest>()
+        binding.fragmentTest.start<Fragment_test>()
+        binding.cardViewTest.start<CardViewTest>()
         //binding.foldableToolbarTest.start<FoldableToolbarTest>(this)
     }
 

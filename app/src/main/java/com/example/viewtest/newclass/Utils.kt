@@ -4,13 +4,20 @@ import android.content.Context
 import android.content.Intent
 import android.widget.Button
 import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import androidx.viewbinding.ViewBinding
 import com.example.viewtest.BaseActivity
 
 object Utils {
-    inline fun <reified T> Button.start(activity: BaseActivity) {
+    inline fun <reified T> Button.start() {
         setOnClickListener {
-            activity.startActivity(Intent(activity,T::class.java))
+            MyAplication.context.startActivity(Intent(MyAplication.context,T::class.java))
+        }
+    }
+    inline fun <reified T> Button.start(crossinline block:Intent.()->Unit) {
+        setOnClickListener {
+            val intent=Intent(MyAplication.context,T::class.java).apply(block)
+            MyAplication.context.startActivity(intent)
         }
     }
     fun Button.toast(activity: BaseActivity){

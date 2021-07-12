@@ -11,13 +11,13 @@ class WebToolTest : BaseActivity() {
         setContentView(binding.root)
         load_toolbar()
 
-        binding.webTestButton.start<WebViewTest>(this)
-        binding.httpurlconnectionTestButton.start<HttpurlConnectionTest>(this)
-        binding.okhttpTestButton.start<OkhttpTest>(this)
-        binding.xmlPullTestButton.start<XmlPullTest>(this)
-        binding.xmlSaxTestButton.start<XmlSaxTest>(this)
-        binding.jsonobjectTestButton.start<JsonobjectTest>(this)
-        binding.gsonTestButton.start<GsonTest>(this)
-        binding.retrofitTestButton.start<RetrofitTest>(this)
+        binding.webTestButton.start<WebViewTest>()
+        binding.httpurlconnectionTestButton.start<HttpurlConnectionTest>()
+        binding.okhttpTestButton.start<OkhttpTest>()
+        binding.xmlPullTestButton.start<XmlPullTest>()
+        binding.xmlSaxTestButton.start<XmlSaxTest>()
+        binding.jsonobjectTestButton.start<JsonobjectTest>()
+        binding.gsonTestButton.start<GsonTest>()
+        binding.retrofitTestButton.start<RetrofitTest>()
     }
 }
