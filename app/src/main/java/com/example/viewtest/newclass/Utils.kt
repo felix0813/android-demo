@@ -11,7 +11,9 @@ import com.example.viewtest.BaseActivity
 object Utils {
     inline fun <reified T> Button.start() {
         setOnClickListener {
-            MyAplication.context.startActivity(Intent(MyAplication.context,T::class.java))
+            val intent=Intent(MyAplication.context,T::class.java)
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            MyAplication.context.startActivity(intent)
         }
     }
     inline fun <reified T> Button.start(crossinline block:Intent.()->Unit) {
